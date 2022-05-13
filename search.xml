@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2022/05/13/google-logo/"/>
+      <url>/2022/05/13/google-logo/</url>
+      
+        <content type="html"><![CDATA[<p>Google的Logo颜色参数</p><table><thead><tr><th>color</th><th>RGB</th><th>Hex</th><th>色调、饱和度、亮度</th></tr></thead><tbody><tr><td>蓝色</td><td>[66, 153, 244]</td><td>#4286F3</td><td>140，214，146</td></tr><tr><td>红色</td><td>[234, 67, 53]</td><td>#EB4537</td><td>3，195，135</td></tr><tr><td>黄色</td><td>[251, 188, 5]</td><td>#FAC230</td><td>30，231，120</td></tr><tr><td>绿色</td><td>[52, 168, 83]</td><td>#55AF7B</td><td>91，127，104</td></tr></tbody></table><p><img src="https://gitee.com/cling5899/Typora-img/raw/master/img/20220402093151.png" alt="11"></p><p>自己随便弄的几张图片，好像不是很好看啊<span class="github-emoji"><span>😂</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132202669.png" alt="image-20220513220239563"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132202489.jpg" alt="电脑壁纸-Google版-16488627569361"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132203186.jpg" alt="微信背景4.0"></p><p>给个三连再走呗</p><p><span class="github-emoji"><span>📢</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙇</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f647.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>:+1:<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>💓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f493.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>drep：基因组的快速比较和去复制</title>
       <link href="/2022/05/07/01drep-notes/"/>
       <url>/2022/05/07/01drep-notes/</url>
@@ -133,6 +146,95 @@
         <tags>
             
             <tag> checkM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora+Picgo-core+Gitee上传图片失败的可能原因</title>
+      <link href="/2022/04/24/typora-picgo-core-gitee/"/>
+      <url>/2022/04/24/typora-picgo-core-gitee/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Typora+Picgo-core+Gitee上传图片失败的可能原因</p></blockquote><blockquote><p>我现在用的是Typora+Picgo+Github，因为换了新电脑，不在乎那点内存了哈哈</p></blockquote><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132207933.png" alt="2022-04-02_093553"></p><p>每次在Typora写好文章，Ctrl+A，Ctrl+C，Ctrl+V,到CSND，看到自己的小笔记被传上来，还是怪开心的。</p><p>==但是==</p><p>每次看到我的图片变成这样，就好烦。</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132207940.png" alt="2022-04-02_093553"></p><h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><h5 id="1-看看图片的链接是不是自己图床的链接，也就是https-gitee-com-有时候我自己忘上传了。"><a href="#1-看看图片的链接是不是自己图床的链接，也就是https-gitee-com-有时候我自己忘上传了。" class="headerlink" title="1.看看图片的链接是不是自己图床的链接，也就是https://gitee.com,有时候我自己忘上传了。"></a>1.看看图片的链接是不是自己图床的链接，也就是<a href="https://gitee.com,有时候我自己忘上传了./">https://gitee.com,有时候我自己忘上传了。</a></h5><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208926.png" alt="image-20220402100916721"></p><h5 id="2-图片太大了，超过1M就有可能显示不了，这时候就需要自己从本地复制粘贴上去了。"><a href="#2-图片太大了，超过1M就有可能显示不了，这时候就需要自己从本地复制粘贴上去了。" class="headerlink" title="2.图片太大了，超过1M就有可能显示不了，这时候就需要自己从本地复制粘贴上去了。"></a>2.图片太大了，超过1M就有可能显示不了，这时候就需要自己从本地复制粘贴上去了。</h5><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208317.png" alt="image-20220402100703035"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208013.png" alt="image-20220402101342472"></p><p>如果打开自己上传好以后，图片在gitee的链接，发现是这样，那估计就是图片太大了</p><p>需要自己调节图片大小，这里我推荐两个软件</p><p>第一个Light Image Resizer 6可以几乎无损画质压缩图片大小，俺也不知道原理<span class="github-emoji"><span>🏃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c3.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>好用就行了</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208302.png" alt="image-20220402101603626"></p><p>第二个就是FastStone Capture，我觉得是真好用</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208066.png" alt="111"></p><p>大家自行探索<span class="github-emoji"><span>🤚</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f91a.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p><h5 id="3-批量上传本地图片失败-试试把本地图片路径改成英文English"><a href="#3-批量上传本地图片失败-试试把本地图片路径改成英文English" class="headerlink" title="3.批量上传本地图片失败,试试把本地图片路径改成英文English"></a>3.批量上传本地图片失败,试试把本地图片路径改成英文English</h5><p>批量上传这个我就没怎么成功，导致我每一次都是一个一个上传好，再Ctrl+V 过去，累死了<span class="github-emoji"><span>😹</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f639.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p><p><strong>我Google到的别人用picgo的能批量上传，但是我用的是picgo-core</strong></p><p>1.对于picgo批量上传出现问题可能是picgo版本问题,新版本的picgo中，本地图片带中文可批量上传。</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208130.png" alt="image-20220402110755810"></p><p>2.==picgo-core批量上传出错可能原因==本地图片储存目录带中文，picgo-core不支持。<span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>终于成功了<span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p><p>于是我试了一下</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208421.png" alt="image-20220402111614772"></p><p>==在用picgo-core批量上传图片时，要保证本地图片的路径当中没有中文==</p><h5 id="4-本地图片粘贴到Typora上显示不出来，可能是你图片的名字第一个不是数字或字母"><a href="#4-本地图片粘贴到Typora上显示不出来，可能是你图片的名字第一个不是数字或字母" class="headerlink" title="4.本地图片粘贴到Typora上显示不出来，可能是你图片的名字第一个不是数字或字母"></a>4.本地图片粘贴到Typora上显示不出来，可能是你图片的名字第一个不是数字或字母</h5><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208117.png" alt="image-20220402102248006"></p><p>比如这种情况就是因为图片名第一个字母是==`==,然后就出问题了，原因肯定不用解释。</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132208145.png" alt="image-20220402102439231"></p><p>给个三连再走呗</p><p><span class="github-emoji"><span>📢</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙇</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f647.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>:+1:<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>💓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f493.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> Picgo </tag>
+            
+            <tag> Gitee </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2022/04/24/xiaoke-skillshare1/"/>
+      <url>/2022/04/24/xiaoke-skillshare1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="怎样查阅及下载文献"><a href="#怎样查阅及下载文献" class="headerlink" title="怎样查阅及下载文献"></a>怎样查阅及下载文献</h1><ol><li><h2 id="学校图书馆——知网——下载有版权的文献"><a href="#学校图书馆——知网——下载有版权的文献" class="headerlink" title="学校图书馆——知网——下载有版权的文献"></a>学校图书馆——知网——下载有版权的文献</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132152070.png" alt="image-20220424112515816"></p></li><li><p><a href="https://www.zjlib.cn/#searchs_1_div">浙江图书馆</a></p><p><a href="https://zhuanlan.zhihu.com/p/46746000">最全干货—— 如何免费在Cnki（知网）下载文献方法荟萃 - 知乎</a></p></li><li><p><a href="http://bbs.99lb.net/">谷粉学术论坛-文献互助</a></p></li><li><p><a href="https://sci-hub.st/">Sci-Hub: removing barriers in the way of science</a></p></li><li><p><a href="https://gfsoso.99lb.net/">谷粉学术</a></p></li><li><p><a href="https://www.cn-ki.net/">www.cn-ki.net</a></p></li><li><p><a href="https://sc.panda321.com/">熊猫学术-Google scholar</a></p></li><li><p><a href="https://chn.oversea.cnki.net/index/">中国知网</a>海外版</p></li><li><p><a href="http://www.4243.net/">大木虫学术导航-让文献下载更便捷！</a></p><p>学术导航网页</p></li><li><p><a href="http://muchong.com/bbs/">小木虫论坛-学术科研互动平台</a></p></li></ol><h1 id="怎么归纳文献，翻译文献"><a href="#怎么归纳文献，翻译文献" class="headerlink" title="怎么归纳文献，翻译文献"></a>怎么归纳文献，翻译文献</h1><h4 id="文献管理科研神器zotero"><a href="#文献管理科研神器zotero" class="headerlink" title="文献管理科研神器zotero"></a>文献管理科研神器<strong>zotero</strong></h4><p><a href="https://www.zotero.org/">Zotero | Your personal research assistant</a></p><p><a href="https://zhuanlan.zhihu.com/p/89115460">Zotero | 打造最佳文献生态（前言篇） - 知乎</a></p><p>青柠学术</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132147565.png" alt="image-20220424113913868"></p><h4 id="知云翻译（使用需要微信登录，且部分翻译引擎需要通过分享到朋友圈解锁）"><a href="#知云翻译（使用需要微信登录，且部分翻译引擎需要通过分享到朋友圈解锁）" class="headerlink" title="知云翻译（使用需要微信登录，且部分翻译引擎需要通过分享到朋友圈解锁）"></a>知云翻译（使用需要微信登录，且部分翻译引擎需要通过分享到朋友圈解锁）</h4><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132147945.png" alt="image-20220424135912997"></p><h1 id="怎样选择科研导师"><a href="#怎样选择科研导师" class="headerlink" title="怎样选择科研导师"></a>怎样选择科研导师</h1><p><a href="http://life.ahmu.edu.cn/teacher-list/all.html">- 安徽医科大学生命科学学院</a></p><ul><li>个人简介</li><li>科研领域</li><li>代表性论文</li><li>研究课题</li></ul><h1 id="进实验室的相关事项"><a href="#进实验室的相关事项" class="headerlink" title="进实验室的相关事项"></a>进实验室的相关事项</h1><ol><li><p>趁早，越早越好</p></li><li><p>多钻研</p><p>不要完全等着</p></li><li><p>扩展自己的圈子，多和学长学姐交流</p></li></ol><h1 id="保研的加分项"><a href="#保研的加分项" class="headerlink" title="保研的加分项"></a>保研的加分项</h1><p><a href="https://mp.weixin.qq.com/s/4gOGIn4_844vtM3gSoZ1Dw">大学生特辑•推免┃这些学籍知识你必须知道！</a></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132147042.png" alt="image-20220424142207594"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132147841.png" alt="image-20220424142224390"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132148820.png" alt="image-20220424142246147"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132148950.png" alt="image-20220424142302822"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132148057.png" alt="image-20220424142317670"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132148055.png" alt="image-20220424142348471"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132153786.png" alt="image-20220424142414697"></p><h1 id="推荐几款我在用的软件"><a href="#推荐几款我在用的软件" class="headerlink" title="推荐几款我在用的软件"></a>推荐几款我在用的软件</h1><ol><li><p>everything</p></li><li><p>Office Tool Plus</p></li><li><p>火绒</p></li><li><p>Google Chrome/ Edge</p></li><li><p>Faststone Capture</p></li><li><p>Snipaste</p></li><li><p>Light Image Resizer (图片压缩)</p></li><li><p>幕布/xmind（思维导图软件）</p></li><li><p>Notion/Obsidian/印象笔记/wolai/语雀</p></li><li><p>Typora</p></li><li><p>Bandicam录屏软件</p></li><li><p>SpaceSniffer</p></li><li><p>sumatrapdf</p></li><li><p>Partition Assistant 9.6.1 TE（分区助手）</p></li><li><p>番茄todo（对于自制力差的同学有一套针对的办法）</p></li><li><p>flomo笔记（多平台快速同步、缺点原图要会员）</p></li><li><p>知乎</p></li><li><p>讯飞输入法（安卓、ipad）、搜狗输入法（windows）</p></li><li><p>学小易/油猴</p></li><li><p>国家反诈中心</p></li><li><p>哔哩哔哩</p></li></ol><h1 id="植物标本"><a href="#植物标本" class="headerlink" title="植物标本"></a>植物标本</h1><p>B类赛事</p><p><a href="http://www.iplant.cn/frps">关于本志 FRPS《中国植物志》全文电子版 iPlant</a><br><a href="http://www.cfh.ac.cn/">中国自然标本馆</a><br><a href="https://www.cvh.ac.cn/index.php">中国数字植物标本馆（CVH）</a><br><a href="http://ppbc.iplant.cn/">PPBC中国植物图像库——最大的植物分类图片库</a><br><a href="http://col.especies.cn/">Species 2000 China,Catalogue of Life China,CoL China 物种2000中国节点 中国生物物种名录</a><br><a href="http://www.iplant.cn/">iPlant 植物智——植物物种信息系统</a><br><a href="https://www.plantplus.cn/cn">植物科学数据中心</a><br><a href="https://www.gbif.org/zh/">GBIF</a></p><p>花伴侣、标本伴侣、形色</p><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="部分优秀网站"><a href="#部分优秀网站" class="headerlink" title="部分优秀网站"></a>部分优秀网站</h1><p><a href="http://music.fy6b.com/">悦音播放器-测试版</a><br><a href="https://www.yeeach.com/post/1732">2022年免费电子书资源大全-出家如初,成佛有余</a><br><a href="https://pixabay.com/zh/">免费正版高清图片素材库 超过2.5百万张优质图片和视频素材可供免费使用和下载</a><br><a href="https://unsplash.com/">Beautiful Free Images &amp; Pictures | Unsplash</a><br><a href="https://www.pexels.com/zh-cn/">免费素材图片 · Pexels</a><br><a href="https://cli.im/">草料二维码生成器</a><br><a href="https://spcqwserdvymm.com.vika.cn/share/shryNwH3HRgvzMTaZVAGx/fodkuzz5eaw0w">🔔 Efficiency-follow</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> “小科”自然科普协会 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 线上会议 </tag>
+            
+            <tag> 学术技能分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图片地理位置查找-延伸(原数据抓取)</title>
+      <link href="/2022/04/10/map-and-metadata/"/>
+      <url>/2022/04/10/map-and-metadata/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>引用：</p><p><a href="https://blog.csdn.net/qq_44934536/article/details/89397512?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164836104916782092935687%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164836104916782092935687&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-9-89397512.142%5Ev5%5Epc_search_result_control_group,143%5Ev6%5Eregister&amp;utm_term=%E9%80%9A%E8%BF%87%E5%9B%BE%E7%89%87%E6%89%BE%E5%88%B0%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE&amp;spm=1018.2226.3001.4187">参考链接1</a></p><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html?lang=zh-Hans">参考链接2</a></p></blockquote><h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><p>元数据是指==关于数据的数据==。在这方面，数据是指您的数字资产，如图像。 元数据对于有效管理资产至关重要。</p><p>元数据是资产可用的所有数据的集合，但不一定包含在该图像中。 元数据的一些示例包括：</p><ul><li>资产的名称。</li><li>上次修改的时间和日期。</li><li>资产存储在存储库中时的大小。</li><li>其所包含文件夹的名称。</li><li>相关资产或已应用的标记。</li></ul><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132155055.png"><table><thead><tr><th>技术元数据（自动创建）</th><th>描述性元数据（无法全自动创建）</th></tr></thead><tbody><tr><td>文件的大小。</td><td>资产所来自的业务（使用的什么软件）</td></tr><tr><td>Dimension（高度和宽度）</td><td>GPS的相机自动跟踪的纬度和经度</td></tr><tr><td>音频或视频文件的比特率</td><td><strong>需要其他服务来创建该数据</strong></td></tr><tr><td>图像的分辨率（详细程度）</td><td>XMP、 ID3、 Exif、 其他从Microsoft Word、PowerPoint、Excel等。</td></tr></tbody></table><h2 id="XMP"><a href="#XMP" class="headerlink" title="XMP"></a>XMP</h2><p>Extensible Metadata Platform (XMP)是用于所有元数据管理 Experience Manager Assets 的开放标准。该标准提供了==可嵌入所有文件格式的通用元数据编码==。 Adobe和其他公司支持XMP standard，因为它提供了丰富的内容模型。 XMP standard和Experience Manager Assets的用户拥有强大的基础平台。</p><h2 id="ID3"><a href="#ID3" class="headerlink" title="ID3"></a>ID3</h2><p>当您在计算机或便携式 MP3 播放器上播放==数字音频文件==时，会显示这些 ID3 标记中存储的数据。</p><p>ID3 标记是专为 MP3 文件格式而设计。有关各种格式的其他信息如下：</p><ul><li>ID3标记在MP3和mp3PRO文件中有效。</li><li>WAV 无标记。</li><li>WMA具有不允许开源实施的专有标记。</li><li>Ogg Vorbis 使用嵌入在 Ogg 容器中的 Xiph 注释。</li><li>AAC 使用专有标记格式。</li></ul><h2 id="Exif"><a href="#Exif" class="headerlink" title="Exif"></a>Exif</h2><p>==可交换图像文件格式==(Exif)是数字摄影中最常用的元数据格式。 它提供了一种在多种文件格式（如JPEG、TIFF、RIFF和WAV）中嵌入固定的元数据属性词汇的方法。 Exif将元数据存储为元数据名称和元数据值的对。这些元数据名称 — 值对也称为标记，请不要将其与Experience Manager中的标记混淆。 现代数码相机创建Exif元数据，现代图形软件支持它。 Exif格式是元数据管理（尤其是对于图像）的最低常用分母。</p><p>Exif的一个主要限制是一些常见的图像文件格式（如BMP、GIF或PNG）不支持它。</p><p>Exif定义的元数据字段通常具有技术性，在描述性元数据管理中的用法有限。 因此，Experience Manager Assets提供了将Exif属性映射到<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-schemas.html?lang=zh-Hans">常用元数据架构</a>和<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html?lang=zh-Hans">XMP</a>的功能。</p><p><a href="https://exiftool.org/**ExifTool">https://exiftool.org/**ExifTool</a> 是一个独立于平台的<a href="https://exiftool.org/ExifTool.html">Perl 库</a>和一个<a href="https://exiftool.org/exiftool_pod.html">命令行应用程序</a>，用于读取、写入和编辑 <a href="https://exiftool.org/#supported">各种文件</a>中的元信息。**</p><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>contributor</td><td>负责贡献内容的个人或公司。</td></tr><tr><td>coverage</td><td>资产覆盖的地理位置或时间段。</td></tr><tr><td>creator</td><td>负责创建内容的个人或公司。</td></tr><tr><td>date</td><td>与资产关联的日期或时间段。</td></tr><tr><td>描述</td><td>关于资产的详细信息。</td></tr><tr><td>format</td><td>资产的文件格式、物理介质或尺寸。Experience Manager 使 <code>dc:format</code> 用表示资产的MIME类型。</td></tr><tr><td>标识符</td><td>资产的唯一参考。</td></tr><tr><td>语言</td><td>资产的语言（例如，<code>en</code>表示英语）。</td></tr><tr><td>publisher</td><td>负责使资产进入可用状态的个人或公司。</td></tr><tr><td>relation</td><td>相关的资产。</td></tr><tr><td>rights</td><td>关于谁有权使用此资产的信息。</td></tr><tr><td>source</td><td>作为资产派生来源的相关资产。</td></tr><tr><td>subject</td><td>资产的主题。</td></tr><tr><td>页面</td><td>资产的名称。</td></tr><tr><td>类型</td><td>资产的性质或类型。</td></tr></tbody></table><h1 id="如何在照片中查找地理位置等信息"><a href="#如何在照片中查找地理位置等信息" class="headerlink" title="如何在照片中查找地理位置等信息"></a>如何在照片中查找地理位置等信息</h1><p>这里的地理位置信息就属于描述性元数据中的一种，由exif或XMP等记录。</p><blockquote><p>可用Windows的文件右键属性界面查找，也可用支持exiftool的软件查看</p></blockquote><p>或者online的exiftool<a href="http://exif-viewer.com/">http://exif-viewer.com/</a></p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132156351.png" alt="image-20220327154015447" style="zoom: 50%;"><p><img src="https://gitee.com/cling5899/Typora-img/raw/master/img/20220327162941.png" alt="image-20220327154108497"></p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132156018.png" alt="image-20220327154139643" style="zoom: 50%;"><blockquote><p>或者，利用在线网站来查找图片的地理信息</p></blockquote><p><a href="http://metapicz.com/#landing">http://metapicz.com/#landing</a></p><p><a href="https://www.pic2map.com/">https://www.pic2map.com/</a></p><p><a href="https://tool.geoimgr.com/">https://tool.geoimgr.com/</a></p><p>三个网站每一个都可以得到图片的地理位置信息，并展示出来，==第三个更为强大，可以把定位更改到任何地方==</p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132156421.png" alt="image-20220327155900597"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132156736.png" alt="image-20220327155914011"></p><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205132156056.png" alt="image-20220327155928151"></p><p>==第三个可以把图片的位置信息改为任何自己想改的地方==</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 元数据 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 地理位置 </tag>
+            
+            <tag> MetaData </tag>
+            
+            <tag> XMP </tag>
+            
+            <tag> ID3 </tag>
             
         </tags>
       
