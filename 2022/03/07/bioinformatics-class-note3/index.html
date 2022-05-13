@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Biostatistics生物统计学第七讲Linear regression and correlation analysis, Cling&#39;s Blog">
-    <meta name="description" content="本文为个人在学习生物统计学时的学习笔记，有什么错误或指教请联系我。">
+    <meta name="keywords" content="生物信息学课程学习笔记（三）, Cling&#39;s Blog">
+    <meta name="description" content="这是我上课过程中随手记的生物信息学笔记，如有错误或指教请联系我修改。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Biostatistics生物统计学第七讲Linear regression and correlation analysis | Cling&#39;s Blog</title>
+    <title>生物信息学课程学习笔记（三） | Cling&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Biostatistics生物统计学第七讲Linear regression and correlation analysis</h1>
+                    <h1 class="description center-align post-title">生物信息学课程学习笔记（三）</h1>
                 </div>
             </div>
         </div>
@@ -326,104 +326,10 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -432,12 +338,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">学习笔记</span>
+                            <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                                <span class="chip bg-color">生物信息学</span>
                             </a>
                         
-                            <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                                <span class="chip bg-color">生物统计学</span>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
                             </a>
                         
                     </div>
@@ -461,7 +367,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-09
+                    2022-03-07
                 </div>
                 
 
@@ -475,14 +381,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    5 分
                 </div>
                 
 
@@ -505,142 +411,119 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linear-regression-and-correlation-analysis"><a href="#Linear-regression-and-correlation-analysis" class="headerlink" title="Linear regression and correlation analysis"></a>Linear regression and correlation analysis</h1><blockquote>
-<p>•第五章中，我们介绍了如何研究两个定性变量是否有关系的问题。</p>
-<p>•实际工作中，我们经常需要研究两个或两个以上定量变量是否有关系，有怎么样的关系。</p>
-<p>•对于生物学数据，因为存在随机性和变异性等，所以通常不能推导出确定的函数关系，但是可以使用统计学上的回归与相关分析研究其分布情况(如平均数、标准差和置信区间)。</p>
+                <h1 id="High-throughput-Sequencing"><a href="#High-throughput-Sequencing" class="headerlink" title="High throughput Sequencing"></a>High throughput Sequencing</h1><p>高通量测序技术</p>
+<h2 id="基因组计划：Human-Genome-Project-HGP"><a href="#基因组计划：Human-Genome-Project-HGP" class="headerlink" title="基因组计划：Human Genome Project, HGP"></a>基因组计划：<strong>Human Genome Project, HGP</strong></h2><p>人类基因组计划与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9B%BC%E5%93%88%E9%A1%BF%E5%8E%9F%E5%AD%90%E5%BC%B9%E8%AE%A1%E5%88%92/15780658">曼哈顿原子弹计划</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%BF%E6%B3%A2%E7%BD%97%E8%AE%A1%E5%88%92/114281">阿波罗计划</a>并称为三大科学计划，是人类科学史上的又一个伟大工程，被誉为<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6/80506">生命科学</a>的“<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%99%BB%E6%9C%88%E8%AE%A1%E5%88%92/890940">登月计划</a>”</p>
+<p>2000年6月草案HGP，序列以千分之一的错误率覆盖了 90% 的基因组，但有超过 150,000 个缺口，只有 28% 的基因组达到了最终标准。</p>
+<p>2003年4月的版本中，只有不到400个空位，并且 99% 的基因组以每 10,000 个碱基对不到一个错误的准确率完成。</p>
+<p>中国参与基因组研究计划的组织是：<br>Beijing Genomics Institute/Human Genome Center, Institute of Genetics, Chinese Academy of Sciences, Beijing, China</p>
+<p>1999年11月10日，1%计划被列入中国国家项目，并确定由北京华大基因研究中心（华大基因）牵头，国家基因组南方中心、北方中心共同参与，承担全部工程1％的测序工作。2000年4月，中国完成了人第3号染色体上3000万个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%A2%B1%E5%9F%BA%E5%AF%B9">碱基对</a>的工作草图。</p>
+<p>北京基因组研究所</p>
+<p>HGP项目发起组织<a target="_blank" rel="noopener" href="https://www.genome.gov/">National Human Genome Research Institute Home | NHGRI</a></p>
+<p>HGP计划的分段目标</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856646.png" alt="image-20220401143919996"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856612.png" alt="image-20220401144153629"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856857.png" alt="image-20220401144428484"></p>
+<h2 id="基因组测序方法"><a href="#基因组测序方法" class="headerlink" title="基因组测序方法"></a>基因组测序方法</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856201.png" alt="image-20220401145502445"></p>
+<ol>
+<li>Chromosomal walking(染色体步移)</li>
+<li>Shotgun methods（全基因组鸟枪法、分级鸟枪法）</li>
+</ol>
+<h3 id="2-1-鸟枪法测序"><a href="#2-1-鸟枪法测序" class="headerlink" title="2.1 鸟枪法测序"></a>2.1 鸟枪法测序</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856982.png" alt="image-20220401145351211"></p>
+<p>准确率：HGS 胜出<br>==对重复序列的组装是WGS最大的劣势:重复序列相似度越高、长度越长，WGS组装效果越差==<br>速度、成本：WGS胜出</p>
+<table>
+<thead>
+<tr>
+<th>全基因组鸟枪法测序策略</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)将整个基因组DNA打碎成便于测序的小片段(10kb)</td>
+</tr>
+<tr>
+<td>(2)依据片段间可能的重叠区实现各片段的有序排列</td>
+</tr>
+<tr>
+<td>(3)完成全长的组装</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://www.genome.gov/genetics-glossary/Shotgun-Sequencing">鸟枪测序</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.genome.gov/About-Genomics/Introduction-to-Genomics">What’s a Genome</a></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856496.jpeg" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>分级鸟枪法测序策略</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(1)将整个基因组DNA==先分成大片段==</td>
+</tr>
+<tr>
+<td>(2)对大片段构建文库，并对其先实现有序拼接，形成所谓叠群图谱(contigmap)</td>
+</tr>
+<tr>
+<td>(3)用鸟枪法对每个大片段进行测序组装</td>
+</tr>
+<tr>
+<td>(4)将所有大片段序列实现最后组装</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856312.png" alt="img"></p>
+<p>==A图就是WGS，B图就是HGS==</p>
+<h3 id="2-2-新兴的测序技术"><a href="#2-2-新兴的测序技术" class="headerlink" title="2.2 新兴的测序技术"></a>2.2 新兴的测序技术</h3><p>==最早的测序手段==，但是又化学上的危害性，现在不怎么把它叫做第一代测序，Maxam-Gilbert测序法[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=DNA%E6%B8%AC%E5%BA%8F&amp;action=edit&amp;section=14">编辑</a>]</p>
+<p>主条目：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%85%8B%E8%90%A8%E5%A7%86-%E5%90%89%E5%B0%94%E4%BC%AF%E7%89%B9%E6%B5%8B%E5%BA%8F">马克萨姆-吉尔伯特测序</a></p>
+<p>马克萨姆-吉尔伯特测序（英语：Maxam-Gilbert sequencing）是一项由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E9%98%BF%E4%BC%A6%C2%B7%E9%A9%AC%E5%85%8B%E8%90%A8%E5%A7%86&amp;action=edit&amp;redlink=1">阿伦·马克萨姆</a>与<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B2%83%E7%88%BE%E7%89%B9%C2%B7%E5%90%89%E7%88%BE%E4%BC%AF%E7%89%B9">沃尔特·吉尔伯特</a>于1976～1977年间开发的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA%E6%B5%8B%E5%BA%8F">DNA测序</a>方法。此项方法基于：对<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%A0%B8%E9%B9%BC%E5%9F%BA">核碱基</a>特异性地进行局部化学改性，接下来在改性<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%A0%B8%E8%8B%B7%E9%85%B8">核苷酸</a>毗邻的位点处DNA骨架发生断裂[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA%E6%B8%AC%E5%BA%8F#cite_note-Maxam77-13">13]</a> 。</p>
+<p>==普遍认为的第一代测序方法==Sanger测序法[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=DNA%E6%B8%AC%E5%BA%8F&amp;action=edit&amp;section=15">编辑</a>]</p>
+<p>主条目：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%A1%91%E6%A0%BC%E6%B5%8B%E5%BA%8F">桑格测序</a></p>
+<p>Sanger（桑格）<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%8C%E8%84%B1%E6%B0%A7%E9%93%BE%E7%BB%88%E6%AD%A2%E6%B3%95">双脱氧链终止法</a>是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BC%97%E9%9B%B7%E5%BE%B7%E9%87%8C%E5%85%8B%C2%B7%E6%A1%91%E6%A0%BC">弗雷德里克·桑格</a>（Frederick Sanger）于1975年发明的。测序过程需要先做一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%81%9A%E5%90%88%E9%85%B6%E9%80%A3%E9%8E%96%E5%8F%8D%E6%87%89">聚集酶链式反应</a>（PCR）。PCR过程中，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%8C%E8%84%B1%E6%B0%A7%E6%A0%B8%E8%8B%B7%E9%85%B8">双脱氧核苷酸</a>可能随机地被加入到正在合成中的DNA片段里。由于双脱氧核糖核苷酸又少了一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B0%A7">氧</a>原子，一旦它被加入到DNA链上，这个DNA链就不能继续增加长度。最终的结果是获得所有可能获得的、不同长度的DNA片段。目前最普遍最先进的方法，是将双脱氧核糖核苷酸进行不同荧光标记。将PCR反应获得的总DNA通过毛细管电泳分离，跑到最末端的DNA就可以在激光的作用下发出荧光。由于ddATP, ddGTP, ddCTP, ddTTP（4种双脱氧核糖核苷酸）荧光标记不同，计算机可以自动根据颜色判断该位置上碱基究竟是A，T，G，C中的哪一个[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA%E6%B8%AC%E5%BA%8F#cite_note-14">14]</a>。</p>
+<blockquote>
+<p>下面是上课的板书</p>
 </blockquote>
-<p>因果关系与平行关系</p>
-<p>•经常地，我们发现一个变量随着另一个变量的变化而变化，但是这不一定说明两者存在<strong>因果关系</strong>。</p>
-<p>•还有一种可能是这两者共同受到另外一个变量的影响，称为<strong>平行关系</strong>。</p>
-<hr>
-<p>散点图(scatter chart):直观的查看x、y的关系。</p>
-<ol>
-<li><p>两个变量间关系的性质和程度；</p>
-</li>
-<li><p>两个变量间关系的类型，是直线型或者曲线型。</p>
-</li>
-<li><p>是否有异常观测值的干扰</p>
-</li>
-</ol>
-<hr>
-<p>==回归分析==(regression analysis)：回归分析经常用于研究两个变量的因果关系，建立回归方程用于根据<strong>自变量</strong>==预测==和==控制==<strong>因变量</strong>。</p>
-<p>表示<strong>原因</strong>的变量称为自变量(independent variable)，常用x表示，一般是试验中预先确定的，<strong>没有随机误差</strong>。</p>
-<p>表示<strong>结果</strong>的变量称为因变量(dependent variable)，常用y表示，y随x的变化而变化，且<strong>具有随机误差</strong>。</p>
-<table>
-<thead>
-<tr>
-<th>回归分析的分类</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>根据自变量，因变量的数目</td>
-<td>一个自变量与一个因变量：一元回归分析</td>
-</tr>
-<tr>
-<td></td>
-<td>多个自变量与一个因变量：多元回归分析</td>
-</tr>
-<tr>
-<td>根据变量间关系的类型</td>
-<td>直线回归(linear regression)</td>
-</tr>
-<tr>
-<td></td>
-<td>曲线回归(curve regression)</td>
-</tr>
-</tbody></table>
-<hr>
-<p>相关分析(correlation analysis)：相关分析通常用于研究两个变量的平行关系。变量x和y无自变量和因变量之分，且<strong>都具有随机误差</strong>。</p>
-<table>
-<thead>
-<tr>
-<th>相关分析的分类</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>对两个变量之间的直线关系进行相关分析</td>
-<td>直线相关(linear correlation)分析或简单相关(simple correlation)分析</td>
-</tr>
-<tr>
-<td>一个变量与多个变量的线性相关</td>
-<td>复(multiple)相关分析</td>
-</tr>
-<tr>
-<td>保持其余变量不变的情况下研究两个变量的线性相关</td>
-<td>偏(partitial)相关分析</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="直线回归"><a href="#直线回归" class="headerlink" title="直线回归"></a>直线回归</h2><p>直线回归的数学模型</p>
-<p>虽然x固定时，y并没有确定的值，但是此时y的分布是固定的，或者说<strong>其平均数等指标是固定的</strong>。<br>$$<br>\mu_Y=\alpha+\beta X<br>$$<br>$\alpha$为直线在y轴的截距(intercept)</p>
-<p>$\beta$为直线的斜率(slope)<br>$$<br>Y=\alpha+\beta X+\epsilon<br>$$<br>若使用样本资料估计参数<br>$$<br>y=a+bx+e<br>$$</p>
-<p>==直线回归方程的参数估计==<br>$$<br>b=\frac{\sum (x-\overline x)-(y-\overline y)}<br>{\sum(x-\overline x)^2}<br>=\frac{SP}{SS_x}<br>$$</p>
-<p>b的分子简称为两个离均差的乘积和，记作SP或$SS_{xy}$</p>
-<p>b的分母称为离均差平方和，记作$SS_x$</p>
-<p>$\alpha=\overline y-b\overline x$</p>
-<hr>
-<p>回归方程的三个基本性质</p>
-<p>(1)$Q=\sum(y-\hat y)^2$最小</p>
-<p>(2)$\sum(y-\hat y)=\sum(y-a-bx)=0$</p>
-<p>(3)$\hat y=\overline y-b\overline x+bx=\overline y+b(x-\overline x)$即直线通过中心点$(\overline x,\overline y)$</p>
-<p>注意：直线回归方程的适用范围不能超过计算时用到的x的范围；不是所有的散点都落在回归直线上，但是很接近回归直线。</p>
-<hr>
-<h3 id="直线回归的假设检验"><a href="#直线回归的假设检验" class="headerlink" title="直线回归的假设检验"></a>直线回归的假设检验</h3><p>直线回归必须检验，<strong>F检验和t检验</strong>都可以用于直线回归的假设检验</p>
-<p>•根据方差分解的思想，我们也可以把y的总方差分解成，x引起的y的方差(称==回归方差==)和随机方差(称==离回归方差==)两部分。</p>
-<p>如果回归方差显著大于离回归方差，那么说明x对y的影响大于随机误差，即y对x的回归关系是显著的，否则则说明回归关系不是显著的。</p>
-<p>直线回归的平方和分解<br>$$<br>\sum(y-\overline y)^2=\sum(\hat y-\overline y)^2+\sum(y-\hat y)^2\<br>左边y的离均差平方和，也称为总平方和SS_y\<br>第一项称回归平方和，记作U或SS_{回归}\<br>第二项称为离回归平方和，也称残差平方和（剩余平方和），记作Q,SS <em>{离回归}或SS</em>{剩余}<br>$$</p>
-<p>$$<br>U=\sum(\hat y-\overline y)^2\<br>=b^2\sum(x-\overline x)^2=b^2SS_x=\frac{SP^2}{SS_x}\<br>Q=SS_y-U<br>$$</p>
-<h3 id="直线回归的自由度分解"><a href="#直线回归的自由度分解" class="headerlink" title="直线回归的自由度分解"></a>直线回归的自由度分解</h3><p>总自由度为n-1</p>
-<p>一元直线回归，只涉及到一个自变量，所以回归平方和的自由度为1</p>
-<p>离回归平方和的自由度等于以上两者之差n-2</p>
-<hr>
-<h3 id="直线回归的F检验"><a href="#直线回归的F检验" class="headerlink" title="直线回归的F检验"></a>直线回归的F检验</h3><p>因为方差等于平方和除以自由度：<br>$$<br>S^2_{回归}=\frac{U}{1}\<br>S^2_{离回归}=\frac{Q}{n-2}\<br>F=\frac{S^2_{回归}}{S^2_{离回归}}\<br>若F值落在F分布的右尾拒绝区，则说明直线回归关系显著<br>$$</p>
-<hr>
-<h3 id="直线回归的t检验"><a href="#直线回归的t检验" class="headerlink" title="直线回归的t检验"></a>直线回归的t检验</h3><p>$Y=\alpha+\beta X+\epsilon$</p>
-<p>$\beta$等于零，那么y与x就没有关系</p>
-<p>b的平均数是$\beta$<br>$$<br>S_b=\frac{S_{离回归}}{\sqrt{SS_x}}\<br>t=\frac{b-\beta}{S_b}=\frac{b}{S_b}<br>(假设\beta=0)<br>$$<br>若t落在$df=n-2$的t分布的双尾拒绝区内说明$\beta$与0的差异显著，即直线回归关系显著。</p>
-<p>F检验和t检验的本质完全相同。</p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743839.png" alt="image-20220406105547440"></p>
-<p>1.回归直线位于$\mu_{y/x}$的置信区间的中间。</p>
-<p>2.$\mu_{y/x}$的置信区间位于y置信区间的中间。</p>
-<p>3.随着x远离平均数时，置信区间越宽，即回归直线描述数据关系的适合度变差</p>
-<h3 id="直线回归的应用注意"><a href="#直线回归的应用注意" class="headerlink" title="直线回归的应用注意"></a>直线回归的应用注意</h3><p>•1. 描述两个变量的依存关系。</p>
-<p>•2. 在一定范围内，根据自变量对因变量进行预测。</p>
-<p>•3. 通过控制自变量来控制因变量。</p>
-<p>PS：要符合生物学意义，区分自变量和因变量，==必须检验==，外推要谨慎。</p>
-<h2 id="直线相关"><a href="#直线相关" class="headerlink" title="直线相关"></a>直线相关</h2><p>•如果不需要区分自变量和因变量，只想了解两个变量的相关程度(degree of correlation)和相关性质(character of correlation)，则可以是使用==相关系数==(correlation coefficient)来描述。</p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743649.png" alt="image-20220406110202264"></p>
-<p>相关系数</p>
-<p>若使用样本资料时<br>$$<br>r=\frac{\sum(x-\overline x)(y-\overline y)}<br>{\sqrt{\sum(x-\overline x)^2\sum(y-\overline y)^2}}<br>=\frac{SP}{\sqrt{SS_xSS_y}}<br>=\sqrt{\frac{U}{SS_y}}<br>$$<br>计算相关系数时，<strong>两个变量是平等的</strong>，不区分自变量和因变量，这是相关和回归的主要区别。</p>
-<p>相关系数的是指就是回归平方和与总平方和比率的平方根，所以==取值范围为[-1,1]==。</p>
-<p>决定系数<br>$$<br>r^2=\frac{SP^2}{SS_xSS_y}<br>=\frac{U}{SS_y}<br>$$<br>决定系数的含义是<strong>回归平方和占总平方和的比率</strong>，取值范围[0,1]。</p>
-<h3 id="直线相关的相关系数假设检验"><a href="#直线相关的相关系数假设检验" class="headerlink" title="直线相关的相关系数假设检验"></a>直线相关的相关系数假设检验</h3><p>计算出相关系数以后，并不能说明两者真的相关，还<strong>必须使用假设检验来推断</strong>，根据样本资料计算的r的理论值ρ与0的差异是否显著。<br>$$<br>S_r=\sqrt{\frac{1-r^2}{n-2}}\<br>t=\frac{r-\rho}{S_r}<br>=\frac{r}{S_r}<br>$$<br>如果t值落在$df=n-2$的t分布的拒绝区，才说明相关是显著的。</p>
-<p>•相关显著性检验的$t_r$与回归显著性检验的$t_b$是相等的，所以两个变量的<strong>回归系数和相关系数的t检验本质是完全相同的</strong>。</p>
-<p>r临界值表，查询附表8，可以发现<strong>随着df的增大，r的临界值变小</strong>，也就是说为了发现弱相关性，必须<strong>样本足够大</strong>才行。</p>
-<h3 id="直线相关的应用注意"><a href="#直线相关的应用注意" class="headerlink" title="直线相关的应用注意"></a>直线相关的应用注意</h3><p>•1. 两个变量应该都服从<strong>正态分布</strong>。</p>
-<p>•2. 相关系数<strong>必须进行检验</strong>。</p>
-<p>•3. 变量应尽可能多。</p>
-<p>•4. 相关系数显著说明两个变量之间存在相关性，到底是因果关系还是平行关系要根据生物学知识进行判断。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>==直线回归和直线相关有什么区别？==</p>
-<ol>
-<li><p>直线回归需要区别自变量和因变量，自变量一般是代表原因的量，或者是可以严格控制的量，因变量应服从正态分布；直线相关则要求两者都服从正态分布，两者的地位是完全相同的。</p>
-</li>
-<li><p><strong>直线回归一般用于研究因果关系，而直线相关一般用于研究平行关系</strong>。</p>
-</li>
-<li><p>回归系数b取值范围是负无穷到正无穷，而相关系数r的取值范围是[-1,1]。</p>
-</li>
-<li><p>b越大，说明直线的斜率越大；|r|越大，说明散点距离直线越近，或者说直线方程的拟合程度越好。</p>
-</li>
-</ol>
-<p>==•直线回归和直线相关有什么联系？==</p>
-<p>•1. r和b的正负号一定是相同的。</p>
-<p>•2. 假设检验是等价的。</p>
-<p>•3. 直线回归的F检验过程中要计算总平方和和回归平方和，而$r^2$则是回归平方和与总平方和的比值。</p>
-<p>•4. 若x和y均为正态分布时，也可以分别计算以x为自变量的回归系数，和以y为自变量的回归系数，且$r^2=b_{x/y}b_{y/x}$。</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856338.png" alt="image-20220401151324410"></p>
+<h4 id="第一代测序技术"><a href="#第一代测序技术" class="headerlink" title="第一代测序技术"></a>第一代测序技术</h4><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sanger_sequencing">wiki百科-桑格测序</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FvHRio1yyhQ">Sanger测序YouTube视频，最好理解版本</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=KTstRrDTmWI">sanger测序YouTube视频</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=e2G5zx-OJIw">sanger测序YouTube视频</a></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131856095.png" alt="img"></p>
+<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857186.png" alt="img" style="zoom: 25%;">
+
+<p>上课的板书</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857185.png" alt="image-20220401155845372"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857160.png" alt="image-20220401155944761"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857225.png" alt="image-20220401152120464"></p>
+<h4 id="第二代测序技术"><a href="#第二代测序技术" class="headerlink" title="第二代测序技术"></a>第二代测序技术</h4><p>焦磷酸测序法(pyrosequencing)</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pyrosequencing">Wiki百科</a></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857714.png" alt="How Pyrosequencing Works"></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wY8to-_zAEo">YouTube视频</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=WdTX1yykLks">YouTube视频</a></p>
+<p>双脱氧链终止法采用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA%E5%A4%8D%E5%88%B6">DNA复制</a>原理。 Sanger测序反应体系中包括目标<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA">DNA</a>片段、脱氧三磷酸核苷酸（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=DNTP&amp;action=edit&amp;redlink=1">dNTP</a>）、双脱氧三磷酸核苷酸（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DdNTP">ddNTP</a>）、测序<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BC%95%E7%89%A9">引物</a>及<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA%E8%81%9A%E5%90%88%E9%85%B6">DNA聚合酶</a>等。 测序反应的核心就是其使用的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DdNTP">ddNTP</a>：由于缺少3’<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BE%9F%E5%9F%BA">-OH</a>基团，不具有与另一个<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=DNTP&amp;action=edit&amp;redlink=1">dNTP</a>连接形成<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%A3%B7%E9%85%B8%E4%BA%8C%E9%85%AF%E9%8D%B5">磷酸二酯键</a>的能力，这些<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DdNTP">ddNTP</a>可用来中止<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNA">DNA</a>链的延伸。此外，这些<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DdNTP">ddNTP</a>上连接有<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%94%BE%E5%B0%84%E6%80%A7%E5%90%8C%E4%BD%8D%E7%B4%A0">放射性同位素</a>或<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%8D%A7%E5%85%89">荧光</a>标记基团，因此可以被自动化的仪器或凝胶成像系统所检测到。</p>
+<blockquote>
+<p>上课的板书</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857483.png" alt="image-20220401160114628"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857928.png" alt="image-20220401161407541"></p>
+<p>拍照的位置是确定的，读同一个位置，一直读，==AGT==、GAC、ACG</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857347.png" alt="image-20220401163942378"></p>
+<p>例如目的基因长1000bp，测序长度是300bp，那R1测300，R2测300，还剩400没测到，中间就没有overlap</p>
+<p>目的基因长500bp，测序长度是300bp，R1测300bp，R2测300bp，overlap就有100bp。</p>
+<p>==从下往上测==，因为它不是直的，从下往上更稳定，质量更好，从上往下他随风摇摆，不好测。</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857499.png" alt="image-20220401164314063"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857449.png" alt="image-20220401152759278"></p>
+<blockquote>
+<p>DNA bead + pyrosequencing</p>
+</blockquote>
+<p><img src="https://gitee.com/cling5899/Typora-img/raw/master/img/20220401184446.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131857686.png" alt="image-20220401153335526"></p>
+<p>Illumina一次只能测<strong>一个碱基</strong>==SOLID一次可以测好几个碱基==，价格的问题。</p>
+<p>==Illumina Sequencing by Synthesis==</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbDFaOFdQQWxOeUY2TFd1LUJubm1RWHNyUk1EUXxBQ3Jtc0tuMWoyRUNjbnBhQnRHaHlXZnM3NHh5OFozd1N3WDdZVU9UcTRwR1BseTVnaHZ2Q0xUenhTODdKU0tTSE1ESlFOck5BOUFxME4tQ1dpWXJaRHBsdlFuRVpabm5lZ2JBU1l4aUVwRVQ1bENUSWxBaUFCYw&amp;q=https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf">Illumina Sequencing详细PDF</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=fCd6B5HRaZ8">YouTube视频</a></p>
+<h4 id="第三代测序技术"><a href="#第三代测序技术" class="headerlink" title="第三代测序技术"></a>第三代测序技术</h4><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131858962.png" alt="image-20220401153836600"></p>
+<h4 id="第四代测序技术"><a href="#第四代测序技术" class="headerlink" title="第四代测序技术"></a>第四代测序技术</h4><p>==NANOPORE四种碱基信号对应的电信号不一样，DNA穿过的时候，电信号就可以转换成碱基信号。这种技术就可以直接测RNA。==它理论上可以测很长很长，就是money的问题。</p>
+<p>Pacific Biosciences可以==测碱基上的修饰==</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131858382.png" alt="image-20220401153913298"></p>
+<p>纳米孔测序比较贵，一个细菌可能就四五万。</p>
+<h3 id="2-3-基因组测序的未来"><a href="#2-3-基因组测序的未来" class="headerlink" title="2.3 基因组测序的未来"></a>2.3 基因组测序的未来</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131858832.png" alt="image-20220401154128818"></p>
 
                 
             </div>
@@ -667,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/">https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/</a>
+                    <a href="https://cling5899.github.io/2022/03/07/bioinformatics-class-note3/">https://cling5899.github.io/2022/03/07/bioinformatics-class-note3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -705,12 +588,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">学习笔记</span>
+                                <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                                    <span class="chip bg-color">生物信息学</span>
                                 </a>
                             
-                                <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                                    <span class="chip bg-color">生物统计学</span>
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
                                 </a>
                             
                         </div>
@@ -762,66 +645,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/07/drep-notes/">
+                <a href="/2022/04/07/biostatistics-chapter1-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="drep：基因组的快速比较和去复制">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Biostatistics课程学习笔记Chapter1-5">
                         
-                        <span class="card-title">drep：基因组的快速比较和去复制</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文为个人在学习drep软件时的学习笔记，有什么错误或指教请联系我。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-07
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/" class="post-category">
-                                    宏基因组学
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/">
-                        <span class="chip bg-color">生信软件</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/08/biostatistics-chapter6/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Biostatistics生物统计学第六讲方差分析">
-                        
-                        <span class="card-title">Biostatistics生物统计学第六讲方差分析</span>
+                        <span class="card-title">Biostatistics课程学习笔记Chapter1-5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -831,9 +661,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -855,6 +685,59 @@
                     
                     <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
                         <span class="chip bg-color">生物统计学</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/06/bioinformatics-class-note2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="生物信息学课程学习笔记（二）">
+                        
+                        <span class="card-title">生物信息学课程学习笔记（二）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这是我上课过程中随手记的生物信息学笔记，如有错误或指教请联系我修改。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    课程笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                        <span class="chip bg-color">生物信息学</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
@@ -923,87 +806,6 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
