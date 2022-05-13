@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Checkm操作实战, Cling&#39;s Blog">
-    <meta name="description" content="lineage-specific（世系特异性）【推荐方法】">
+    <meta name="keywords" content="微生物多样性数据分析（16S）, Cling&#39;s Blog">
+    <meta name="description" content="微生物多样性数据分析（16S）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Checkm操作实战 | Cling&#39;s Blog</title>
+    <title>微生物多样性数据分析（16S） | Cling&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Checkm操作实战</h1>
+                    <h1 class="description center-align post-title">微生物多样性数据分析（16S）</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/checkM/">
-                                <span class="chip bg-color">checkM</span>
+                            <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                                <span class="chip bg-color">生物信息学</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">数据分析</span>
                             </a>
                         
                     </div>
@@ -444,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
-                                宏基因组
+                            <a href="/categories/16s/" class="post-category">
+                                16s
                             </a>
                         
                     </div>
@@ -457,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-12
+                    2022-03-08
                 </div>
                 
 
@@ -471,14 +475,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    347
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -501,160 +505,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/Ecogenomics/CheckM">CheckM的GitHub官网</a></p>
-</blockquote>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/Ecogenomics/CheckM/wiki">CheckM英文帮助文档</a></p>
-</blockquote>
-<blockquote>
-<p>参考链接</p>
-<p><a target="_blank" rel="noopener" href="http://www.mselab.cn/detail/81/">CheckM (宏)基因组质量评估</a></p>
-<p><a target="_blank" rel="noopener" href="https://nmdc.cn/analyze/details?id=60063a780b38496ee0c908b0">国家微生物科学数据中心-CheckM使用说明</a>内有视频及PDF讲解，还可线上测试。</p>
-</blockquote>
-<p>参考微信公众号宏基因组文章</p>
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>CheckM首先基于完整的已测序细菌基因组作为参考基因组，构建基因组的进化树，构建每个谱系（可以理解为一类物种）的单拷贝基因集（管家基因）（single copy genes，SCGs，为什么是单拷贝？因为这样可以开展基因组混合程度、污染程度等的评估）。在使用时，将我们的Bin与参考基因组一起建树，基于进化关系找到Bin的参考物种，然后结合参考物种的单拷贝基因集，计算两个重要指标</p>
-<p>Completeness，完整度，Bin基因与对应SCGs相比，基因数量是否完整，取值[0,100%]，数值越大，表示Bin质量越好； Contamination，污染度，Bin基因包含多个物种的SCGs，即一个Bin存在多个物种的程度，取值[0,100%]，数值越小，表示Bin质量越好。</p>
-<p>获得每个bin的污染度、完整度信息后，挑选高质量的bin进行物种、功能注释。再后续分析中，并没有固定标准。需要的数量多，则放宽阈值；需要的数量少，则提升阈值。其中，最常用的指标是污染度小于10%，且完整度大于80%。大家可以在这个基础上上下调整。</p>
-<blockquote>
-<p>得到了组装的bin的数据，CheckM下载完成，开始分析</p>
-</blockquote>
-<h1 id="CheckM的工作流程"><a href="#CheckM的工作流程" class="headerlink" title="CheckM的工作流程"></a>CheckM的工作流程</h1><p>lineage-specific（世系特异性）==【推荐方法】==</p>
-<pre class="line-numbers language-none"><code class="language-none">checkm lineage_wf &lt;bin folder&gt; &lt;output folder&gt;
-##根据基因组在参考基因组发育树中的位置，来推断它的single-copy基因集，需要有checkM的数据库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>taxonomic-specific（物种分类特异性）</p>
-<pre class="line-numbers language-none"><code class="language-none">checkm taxonomy_wf &lt;rank&gt; &lt;taxon&gt; &lt;bin folder&gt; &lt;output folder&gt; &lt;rank&gt;: phylum; &lt;taxon&gt; : Cyanobacteria
-##自己知道自己的数据来自哪个门，什么科的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ol start="3">
-<li>custom marker genes（自行指定基因maker）</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">checkm analyze &lt;custom HMM file&gt; &lt;bin folder&gt; &lt;output folder&gt;
-checkm qa &lt;custom HMM file&gt; &lt;output folder&gt;
-##自己预测了基因maker，&lt;custom HMM file&gt;就是预测的结果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="【推荐方法】"><a href="#【推荐方法】" class="headerlink" title="【推荐方法】"></a>【推荐方法】</h1><p>lineage-specific（世系特异性）（使用该方法需下载checkM的参考数据集，并设置安装在相应位置）</p>
-<pre class="line-numbers language-none"><code class="language-none">##下载数据库，并解压设置路径
-wget -c https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
-tar -zxvf checkm_data_2015_01_16.tar.gz
-checkm data setRoot $PATH/checkm_data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-<p>==主要操作命令==</p>
-<h2 id="checkm-lineage-wf-h的详细参数-主要用这个"><a href="#checkm-lineage-wf-h的详细参数-主要用这个" class="headerlink" title="checkm lineage_wf -h的详细参数(主要用这个)"></a>checkm lineage_wf -h的详细参数(主要用这个)</h2><pre class="line-numbers language-none"><code class="language-none">$ checkm lineage_wf -h
-usage: checkm lineage_wf [-h] [-r] [--ali] [--nt] [-g] [-u UNIQUE] [-m MULTI]
-                         [--force_domain] [--no_refinement]
-                         [--individual_markers] [--skip_adj_correction]
-                         [--skip_pseudogene_correction]
-                         [--aai_strain AAI_STRAIN] [-a ALIGNMENT_FILE]
-                         [--ignore_thresholds] [-e E_VALUE] [-l LENGTH]
-                         [-f FILE] [--tab_table] [-x EXTENSION] [-t THREADS]
-                         [--pplacer_threads PPLACER_THREADS] [-q]
-                         [--tmpdir TMPDIR]
-                         bin_dir output_dir
-
-Runs tree, lineage_set, analyze, qa #跑tree、lineage_set、analyze、qa这四个操作
-
-positional arguments:##位置参数
-  bin_dir               directory containing bins (fasta format)###你组装得到bin的目录
-  output_dir            directory to write output files##写入输出文件的目录
-
-optional arguments:##可选参数
-  -h, --help            show this help message and exit##就是我不了解参数，救命
-  -r, --reduced_tree    use reduced tree (requires &lt;16GB of memory) for determining lineage of each bin##使用精简树(需要小于16 GB的内存)来确定每个箱的谱系
-  --ali                 generate HMMER alignment file for each bin##为每个条柱生成HMMER对齐文件
-  --nt                  generate nucleotide gene sequences for each bin##为每个bin生成核苷酸基因序列
-  -g, --genes           bins contain genes as amino acids instead of nucleotide contigs##bin中含有氨基酸而不是核苷酸重叠群的基因
-  -u, --unique UNIQUE   minimum number of unique phylogenetic markers required to use lineage-specific marker set (default: 10)##使用谱系特定标记集所需的唯一系统发育标记的最小数量(默认值：10)
-  -m, --multi MULTI     maximum number of multi-copy phylogenetic markers before defaulting to domain-level marker set (default: 10)##默认设置为域级标记集之前的多拷贝系统发育标记的最大数量(默认值：10)
-  --force_domain        use domain-level sets for all bins##对所有bin使用域级别集
-  --no_refinement       do not perform lineage-specific marker set refinement##不执行特定于谱系的标记集细化
-  --individual_markers  treat marker as independent (i.e., ignore co-located set structure)##将标记视为独立的（即忽略共存的集合结构）
-  --skip_adj_correction
-                        do not exclude adjacent marker genes when estimating contamination##在估计污染时不排除相邻的标记基因
-  --skip_pseudogene_correction
-                        skip identification and filtering of pseudogenes##假基因的跳跃识别与过滤
-  --aai_strain AAI_STRAIN
-                        AAI threshold used to identify strain heterogeneity (default: 0.9)##用于识别菌株异质性的AAI阈值(默认值：0.9)
-  -a, --alignment_file ALIGNMENT_FILE
-                        produce file showing alignment of multi-copy genes and their AAI identity##生成显示多拷贝基因的比对及其AAI身份的文件
-  --ignore_thresholds   ignore model-specific score thresholds##忽略特定于型号的分数阈值
-  -e, --e_value E_VALUE
-                        e-value cut off (default: 1e-10)##E值截止(默认：1e-10)
-  -l, --length LENGTH   percent overlap between target and query (default: 0.7)##目标和查询之间的重叠百分比(默认值：0.7)
-  -f, --file FILE       print results to file (default: stdout)##将结果打印到文件（默认：stdout）
-  --tab_table           print tab-separated values table##打印制表符分隔的值表
-  -x, --extension EXTENSION
-                        extension of bins (other files in directory are ignored) (default: fna)##Bin的扩展名(忽略目录中的其他文件)(默认：FNA)
-  -t, --threads THREADS
-                        number of threads (default: 1)##线程数(默认为1)
-  --pplacer_threads PPLACER_THREADS
-                        number of threads used by pplacer (memory usage increases linearly with additional threads) (default: 1)##Pplacer使用的线程数(内存使用量随着线程的增加而线性增加)(默认值：1)
-  -q, --quiet           suppress console output##抑制控制台输出
-  --tmpdir TMPDIR       specify an alternative directory for temporary files##为临时文件指定替代目录
-
-Example: checkm lineage_wf ./bins ./output<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>checkm的所有参数</p>
-<pre class="line-numbers language-none"><code class="language-none">usage: checkm
-              {data,tree,tree_qa,lineage_set,taxon_list,taxon_set,analyze,qa,lineage_wf,taxonomy_wf,gc_plot,coding_plot,tetra_plot,dist_plot,gc_bias_plot,nx_plot,len_hist,marker_plot,unbinned,coverage,tetra,profile,ssu_finder,merge,outliers,modify,unique,test}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="Overview一般不需要用到这块"><a href="#Overview一般不需要用到这块" class="headerlink" title="Overview一般不需要用到这块"></a>Overview一般不需要用到这块</h2><pre class="line-numbers language-none"><code class="language-none">Overview
-Lineage-specific marker set##谱系特定的标记集
-tree: place bins in the reference genome tree##把bins放到参考基因组树中
-tree_qa: assess phylogenetic markers found in each bin##评估在每个bin中发现的系统发育标记
-lineage_set: infer lineage-specific marker sets for each bin##为每个仓位推断特定于谱系的标记集
-
-Taxonomic-specific marker set##特定于分类的标记集
-taxon_list: list available taxonomic-specific marker sets##列出可用的特定于分类的标记集
-taxon_set: infer taxonomic-specific marker set##推断特定于分类的标记集
-
-Apply marker set to genome bins##将标记集应用于基因组bins
-analyze: identify marker genes in bins##识别bins中的标记基因
-qa: assess bins for contamination and completeness##评估bins的污染性和完整<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="unbinned"><a href="#unbinned" class="headerlink" title="unbinned"></a>unbinned</h5><pre class="line-numbers language-none"><code class="language-none">usage: checkm unbinned [-h] [-x EXTENSION] [-s MIN_SEQ_LEN] [-q]
-                       bin_dir seq_file output_seq_file output_stats_file
-Example: checkm unbinned ./bins seqs.fna unbinned.fna unbinned_stats.tsv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">实战
-(py37) [chenl@cpu3 ~/textcheckm/radata]$ checkm unbinned -x fa /home/chenl/textcheckm/SRR5091453/bin /home/chenl/textcheckm/radata/SRR5091453_1_paired.fasta checkm-unbinned.txt checkm-unbinned-stats.txt
-##<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131933531.png" alt="image-20220406185757519"></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131933638.png" alt="image-20220406185819763"></p>
-<h5 id="coverage"><a href="#coverage" class="headerlink" title="coverage"></a>coverage</h5><pre class="line-numbers language-none"><code class="language-none">usage: checkm coverage [-h] [-x EXTENSION] [-r] [-a MIN_ALIGN]
-                       [-e MAX_EDIT_DIST] [-m MIN_QC] [-t THREADS] [-q]
-                       bin_dir output_file bam_files [bam_files ...]
-Example: checkm coverage ./bins coverage.tsv example_1.bam example_2.bam<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="tetra"><a href="#tetra" class="headerlink" title="tetra"></a>tetra</h5><pre class="line-numbers language-none"><code class="language-none">usage: checkm tetra [-h] [-t THREADS] [-q] seq_file output_file
-Example: checkm tetra seqs.fna tetra.tsv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">实战
-(py37) [chenl@cpu3 ~/textcheckm/radata]$ checkm tetra SRR5091453_1_paired.fasta SRR5091453-tetra.tsv
-##结果
-生成 SRR5091453-tetra.tsv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131933558.png" alt="image-20220406191115228"></p>
-<h5 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h5><pre class="line-numbers language-none"><code class="language-none">usage: checkm profile [-h] [-f FILE] [--tab_table] [-q] coverage_file
-Example: checkm profile coverage.tsv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h5 id="gc-plot-create-GC-histogram-and-delta-GC-plot"><a href="#gc-plot-create-GC-histogram-and-delta-GC-plot" class="headerlink" title="gc_plot: create GC histogram and delta-GC plot"></a>gc_plot: create GC histogram and delta-GC plot</h5><pre class="line-numbers language-none"><code class="language-none">usage: checkm gc_plot [-h] [--image_type {eps,pdf,png,ps,svg}] [--dpi DPI]
-                      [--font_size FONT_SIZE] [-x EXTENSION] [--width WIDTH]
-                      [--height HEIGHT] [-w GC_WINDOW_SIZE] [-b GC_BIN_WIDTH]
-                      [-q]
-                      bin_dir output_dir dist_value [dist_value ...]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">##实战##有的参数没设置，dist_value随便设置的
-checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5091453-gc_plot 50
-##结果<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131933242.png" alt="image-20220408153324312"></p>
+                <h1 id="微生物多样性数据分析（16S）"><a href="#微生物多样性数据分析（16S）" class="headerlink" title="微生物多样性数据分析（16S）"></a>微生物多样性数据分析（16S）</h1><p>9个可变区，10个保守区，扩增V3区、V4区、或者一起、或者V6、V9。</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926803.png" alt="image-20220421080443200"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926638.png" alt="image-20220421080514219">==OTU(Operational taxonomic unit)==</p>
+<p>OTU(operational taxonomic units) 是在系统发生学研究或群体遗传学研究中，为了便于进行分析，人为给某一个分类单元（品系，种，属，分组等）设置的同一标志。通常按照 97% 的相似性阈值将序列划分为不同的 OTU，每一个 OTU 通常被视为一个微生物物种。相似性小于97%就可以认为属于不同的种，相似性小于95%，可以认为属于不同的属。</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926275.png" alt="image-20220421080622444">==PCA、PCoA==</p>
+<p>PCA : 主成分分析。在多元统计分析中，<strong>主成分分析</strong>（英语：<strong>Principal components analysis</strong>，<strong>PCA</strong>）是一种统计分析、简化数据集的方法。它利用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%AD%A3%E4%BA%A4%E5%8F%98%E6%8D%A2">正交变换</a>来对一系列可能相关的变量的观测值进行线性变换，从而投影为一系列线性不相关变量的值，这些不相关变量称为主成分（Principal Components）。具体地，主成分可以看做一个线性方程，其包含一系列线性系数来指示投影方向。PCA对原始数据的正则化或预处理敏感（相对缩放）</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926111.png" alt="image-20220421080800102">16S 测序数据质量控制</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926319.png" alt="image-20220421081758239">一般都是双端Barcode</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926888.png" alt="image-20220421082315238"><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926681.png" alt="image-20220421082339603"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131926750.png" alt="image-20220421082358900">嵌合体（Chimera)</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131927268.png" alt="image-20220421082948857"></p>
+<h1 id="16S-OTU聚类及下游分析"><a href="#16S-OTU聚类及下游分析" class="headerlink" title="16S OTU聚类及下游分析"></a>16S OTU聚类及下游分析</h1><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131927165.png" alt="image-20220421083252650">n</p>
 
                 
             </div>
@@ -681,7 +543,7 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cling5899.github.io/2022/04/12/checkm-options-ch-zn/">https://cling5899.github.io/2022/04/12/checkm-options-ch-zn/</a>
+                    <a href="https://cling5899.github.io/2022/03/08/bioinformatics-class-note4/">https://cling5899.github.io/2022/03/08/bioinformatics-class-note4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -719,8 +581,12 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/checkM/">
-                                    <span class="chip bg-color">checkM</span>
+                                <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                                    <span class="chip bg-color">生物信息学</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">数据分析</span>
                                 </a>
                             
                         </div>
@@ -772,19 +638,19 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/01/pigz-and-mutliprogress/">
+                <a href="/2022/05/01/01checkm-practice/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="如何加快压缩和解压缩的速度">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Checkm操作试验">
                         
-                        <span class="card-title">如何加快压缩和解压缩的速度</span>
+                        <span class="card-title">Checkm操作试验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文介绍了几种Lunix中常见的数据解压和压缩方法以及pigz如何多线程进行压缩和解压缩
+                            lineage-specific（世系特异性）【推荐方法】
                         
                     </div>
                     <div class="publish-info">
@@ -795,8 +661,8 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Lunix/" class="post-category">
-                                    Lunix
+                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
+                                    宏基因组
                                 </a>
                             
                             
@@ -806,16 +672,8 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/gzip/">
-                        <span class="chip bg-color">gzip</span>
-                    </a>
-                    
-                    <a href="/tags/pigz/">
-                        <span class="chip bg-color">pigz</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B%E7%BC%A9/">
-                        <span class="chip bg-color">压缩与解压缩</span>
+                    <a href="/tags/checkM/">
+                        <span class="chip bg-color">checkM</span>
                     </a>
                     
                 </div>
@@ -829,24 +687,24 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/12/nonparametric-tests-and-basics-of-linear-algebra/">
+                <a href="/2022/03/07/bioinformatics-class-note3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Biostatistics课程学习笔记第八章非参数检验和线性代数基础">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="生物信息学课程学习笔记（三）">
                         
-                        <span class="card-title">Biostatistics课程学习笔记第八章非参数检验和线性代数基础</span>
+                        <span class="card-title">生物信息学课程学习笔记（三）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文为个人在学习生物统计学时的学习笔记，有什么错误或指教请联系我。
+                            这是我上课过程中随手记的生物信息学笔记，如有错误或指教请联系我修改。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
                             </span>
                         <span class="publish-author">
                             
@@ -863,12 +721,12 @@ checkm gc_plot --image_type pdf -x fa /home/chenl/textcheckm/SRR5091453/bin SRR5
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
+                    <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                        <span class="chip bg-color">生物信息学</span>
                     </a>
                     
-                    <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                        <span class="chip bg-color">生物统计学</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>

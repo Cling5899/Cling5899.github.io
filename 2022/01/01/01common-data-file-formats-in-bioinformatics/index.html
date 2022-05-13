@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Biostatistics生物统计学第七讲Linear regression and correlation analysis, Cling&#39;s Blog">
-    <meta name="description" content="本文为个人在学习生物统计学时的学习笔记，有什么错误或指教请联系我。">
+    <meta name="keywords" content="Common Data File Formats in Bioinformatics, Cling&#39;s Blog">
+    <meta name="description" content="生物信息学当中常见的数据格式及意义">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Biostatistics生物统计学第七讲Linear regression and correlation analysis | Cling&#39;s Blog</title>
+    <title>Common Data File Formats in Bioinformatics | Cling&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Biostatistics生物统计学第七讲Linear regression and correlation analysis</h1>
+                    <h1 class="description center-align post-title">Common Data File Formats in Bioinformatics</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">学习笔记</span>
+                            <a href="/tags/Data-File-Formats/">
+                                <span class="chip bg-color">Data File Formats</span>
                             </a>
                         
-                            <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                                <span class="chip bg-color">生物统计学</span>
+                            <a href="/tags/%E7%94%9F%E4%BF%A1%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/">
+                                <span class="chip bg-color">生信数据格式</span>
                             </a>
                         
                     </div>
@@ -461,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-09
+                    2022-01-01
                 </div>
                 
 
@@ -475,14 +475,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    12 分
                 </div>
                 
 
@@ -505,142 +505,191 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Linear-regression-and-correlation-analysis"><a href="#Linear-regression-and-correlation-analysis" class="headerlink" title="Linear regression and correlation analysis"></a>Linear regression and correlation analysis</h1><blockquote>
-<p>•第五章中，我们介绍了如何研究两个定性变量是否有关系的问题。</p>
-<p>•实际工作中，我们经常需要研究两个或两个以上定量变量是否有关系，有怎么样的关系。</p>
-<p>•对于生物学数据，因为存在随机性和变异性等，所以通常不能推导出确定的函数关系，但是可以使用统计学上的回归与相关分析研究其分布情况(如平均数、标准差和置信区间)。</p>
+                <h1 id="Common-Data-File-Formats-in-Bioinformatics"><a href="#Common-Data-File-Formats-in-Bioinformatics" class="headerlink" title="Common Data File Formats in Bioinformatics"></a>Common Data File Formats in Bioinformatics</h1><ul>
+<li><p>利用<strong>Sanger、illumina、第三代和第四代测序技术</strong>，我们测序得到的是带有质量值的碱基序列==fastq==格式，参考基因组是==fasta==格式。</p>
+</li>
+<li><p>用比对工具把fastq格式的序列回帖到对应的fasta格式的参考基因组序列，就可以产⽣==sam==格式的⽐对⽂件。</p>
+</li>
+<li><p>把sam格式的⽂本⽂件压缩成==⼆进制bam==⽂件可以节省空间。</p>
+</li>
+<li><p>如果是记录某些位点或者区域碱基的变化，就是==VCF==⽂件格式。</p>
+</li>
+<li><p>如果对参考基因组上面的各个区段标记它们的性质，比如哪些区域是外显子，内含子， UTR等等，这就是==gtf/gff==格式。</p>
+</li>
+<li><p>如果只是为了单纯描述某个基因组区域，就是==bed==格式⽂件，记录染色体号以及起始终止坐标，正负链即可。</p>
+</li>
+</ul>
+<h2 id="fastq文件"><a href="#fastq文件" class="headerlink" title="fastq文件"></a>fastq文件</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>fastq=fasta+quality(Fasta格式加上质量数据)</p>
 </blockquote>
-<p>因果关系与平行关系</p>
-<p>•经常地，我们发现一个变量随着另一个变量的变化而变化，但是这不一定说明两者存在<strong>因果关系</strong>。</p>
-<p>•还有一种可能是这两者共同受到另外一个变量的影响，称为<strong>平行关系</strong>。</p>
-<hr>
-<p>散点图(scatter chart):直观的查看x、y的关系。</p>
+<p><a target="_blank" rel="noopener" href="https://support.illumina.com/bulletins/2016/04/chinese-fastq-files-explained.html">https://support.illumina.com/bulletins/2016/04/chinese-fastq-files-explained.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://help.basespace.illumina.com/articles/descriptive/fastq-files/">https://help.basespace.illumina.com/articles/descriptive/fastq-files/</a></p>
+<blockquote>
+<p>Illumina测序技术使用 <a target="_blank" rel="noopener" href="https://v.youku.com/v_show/id_XMzMxMTk0NzQ5Ng==.html?spm=a2h3j.8428770.3416059.1">簇生成和边合成边测序（SBS）化学技术</a>对流动槽（flow cell）上数百万或数十亿簇（cluster）进行测序，具体簇的数目取决于测序平台。 在边合成边测序化学过程中，仪器上的实时分析（RTA）软件对每个簇的每个循环进行碱基检出和存储。 RTA以单个读取碱基（base call，或称BCL）文件的形式存储碱基检出数据。 测序完成后，必须将BCL文件中的测定的碱基转换为序列数据。 此过程称为BCL到FASTQ的转换。</p>
+</blockquote>
+<p>FASTQ是基于文本的，保存生物序列（通常是核酸序列）和其测序质量信息的<strong>标准</strong>格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是<strong>将FASTA序列与质量数据放到一起</strong>，目前已经成为高通量测序结果的事实标准。</p>
+<p>对于单端测序的运行，将为每个流动槽上每条通道的每个样品创建一个Read 1（R1）FASTQ文件。 对于双端测序的运行，将为每个流动槽上每条通道的每个样品各创建一个R1和一个Read 2（R2）FASTQ文件。 FASTQ文件是使用扩展名*.fastq.gz压缩和创建的。</p>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p><img src="https://gitee.com/cling5899/Typora-img/raw/master/img/20220406150036.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914439.png" alt="preload"></p>
 <ol>
-<li><p>两个变量间关系的性质和程度；</p>
+<li><p>第一行以@开头，序列标识符，其中包含有关测序运行和簇的信息。 该行的具体内容会因使用的BCL到FASTQ转换软件而不同。（与FASTA格式的描述行类似）</p>
 </li>
-<li><p>两个变量间关系的类型，是直线型或者曲线型。</p>
+<li><p>序列（碱基信号； A，C，T，G和N）。</p>
 </li>
-<li><p>是否有异常观测值的干扰</p>
+<li><p>分隔符，只是一个加号（+），之后可以再次加上序列的标识及描述信息（可选）。</p>
+</li>
+<li><p>读取碱基的质量值。，与第二行的序列相对应，长度必须与第二行相同。这些是Phred +33编码的，使用ASCII字符表示数字质量值。</p>
 </li>
 </ol>
-<hr>
-<p>==回归分析==(regression analysis)：回归分析经常用于研究两个变量的因果关系，建立回归方程用于根据<strong>自变量</strong>==预测==和==控制==<strong>因变量</strong>。</p>
-<p>表示<strong>原因</strong>的变量称为自变量(independent variable)，常用x表示，一般是试验中预先确定的，<strong>没有随机误差</strong>。</p>
-<p>表示<strong>结果</strong>的变量称为因变量(dependent variable)，常用y表示，y随x的变化而变化，且<strong>具有随机误差</strong>。</p>
+<p>其中!为最低质量、~则为最高质量。以下字符从左到右代表从低到高的质量得分的：</p>
+<pre class="line-numbers language-none"><code class="language-none">!"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914367.png" alt="image-20220406150612091"></p>
+<p>质量值的计算公式如下：$Q=-10 \times log_{10}P$</p>
+<p>这个公式中Q表示的是潜在错误的概率，Q值越大，表明测错的可能性越小。下面是Q值对应的错误率表：</p>
 <table>
 <thead>
 <tr>
-<th>回归分析的分类</th>
-<th></th>
+<th>Phred Quality Score</th>
+<th>Probability of incorrect base call</th>
+<th>Base call accuracy</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>根据自变量，因变量的数目</td>
-<td>一个自变量与一个因变量：一元回归分析</td>
+<td>10</td>
+<td>1 in 10</td>
+<td>90%</td>
 </tr>
 <tr>
-<td></td>
-<td>多个自变量与一个因变量：多元回归分析</td>
+<td>20</td>
+<td>1 in 100</td>
+<td>99%</td>
 </tr>
 <tr>
-<td>根据变量间关系的类型</td>
-<td>直线回归(linear regression)</td>
+<td>30</td>
+<td>1 in 1000</td>
+<td>99.9%</td>
 </tr>
 <tr>
-<td></td>
-<td>曲线回归(curve regression)</td>
+<td>40</td>
+<td>1 in 10000</td>
+<td>99.99%</td>
+</tr>
+<tr>
+<td>50</td>
+<td>1 in 100000</td>
+<td>99.999%</td>
+</tr>
+<tr>
+<td>60</td>
+<td>1 in 1000000</td>
+<td>99.9999%</td>
 </tr>
 </tbody></table>
-<hr>
-<p>相关分析(correlation analysis)：相关分析通常用于研究两个变量的平行关系。变量x和y无自变量和因变量之分，且<strong>都具有随机误差</strong>。</p>
-<table>
-<thead>
-<tr>
-<th>相关分析的分类</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>对两个变量之间的直线关系进行相关分析</td>
-<td>直线相关(linear correlation)分析或简单相关(simple correlation)分析</td>
-</tr>
-<tr>
-<td>一个变量与多个变量的线性相关</td>
-<td>复(multiple)相关分析</td>
-</tr>
-<tr>
-<td>保持其余变量不变的情况下研究两个变量的线性相关</td>
-<td>偏(partitial)相关分析</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="直线回归"><a href="#直线回归" class="headerlink" title="直线回归"></a>直线回归</h2><p>直线回归的数学模型</p>
-<p>虽然x固定时，y并没有确定的值，但是此时y的分布是固定的，或者说<strong>其平均数等指标是固定的</strong>。<br>$$<br>\mu_Y=\alpha+\beta X<br>$$<br>$\alpha$为直线在y轴的截距(intercept)</p>
-<p>$\beta$为直线的斜率(slope)<br>$$<br>Y=\alpha+\beta X+\epsilon<br>$$<br>若使用样本资料估计参数<br>$$<br>y=a+bx+e<br>$$</p>
-<p>==直线回归方程的参数估计==<br>$$<br>b=\frac{\sum (x-\overline x)-(y-\overline y)}<br>{\sum(x-\overline x)^2}<br>=\frac{SP}{SS_x}<br>$$</p>
-<p>b的分子简称为两个离均差的乘积和，记作SP或$SS_{xy}$</p>
-<p>b的分母称为离均差平方和，记作$SS_x$</p>
-<p>$\alpha=\overline y-b\overline x$</p>
-<hr>
-<p>回归方程的三个基本性质</p>
-<p>(1)$Q=\sum(y-\hat y)^2$最小</p>
-<p>(2)$\sum(y-\hat y)=\sum(y-a-bx)=0$</p>
-<p>(3)$\hat y=\overline y-b\overline x+bx=\overline y+b(x-\overline x)$即直线通过中心点$(\overline x,\overline y)$</p>
-<p>注意：直线回归方程的适用范围不能超过计算时用到的x的范围；不是所有的散点都落在回归直线上，但是很接近回归直线。</p>
-<hr>
-<h3 id="直线回归的假设检验"><a href="#直线回归的假设检验" class="headerlink" title="直线回归的假设检验"></a>直线回归的假设检验</h3><p>直线回归必须检验，<strong>F检验和t检验</strong>都可以用于直线回归的假设检验</p>
-<p>•根据方差分解的思想，我们也可以把y的总方差分解成，x引起的y的方差(称==回归方差==)和随机方差(称==离回归方差==)两部分。</p>
-<p>如果回归方差显著大于离回归方差，那么说明x对y的影响大于随机误差，即y对x的回归关系是显著的，否则则说明回归关系不是显著的。</p>
-<p>直线回归的平方和分解<br>$$<br>\sum(y-\overline y)^2=\sum(\hat y-\overline y)^2+\sum(y-\hat y)^2\<br>左边y的离均差平方和，也称为总平方和SS_y\<br>第一项称回归平方和，记作U或SS_{回归}\<br>第二项称为离回归平方和，也称残差平方和（剩余平方和），记作Q,SS <em>{离回归}或SS</em>{剩余}<br>$$</p>
-<p>$$<br>U=\sum(\hat y-\overline y)^2\<br>=b^2\sum(x-\overline x)^2=b^2SS_x=\frac{SP^2}{SS_x}\<br>Q=SS_y-U<br>$$</p>
-<h3 id="直线回归的自由度分解"><a href="#直线回归的自由度分解" class="headerlink" title="直线回归的自由度分解"></a>直线回归的自由度分解</h3><p>总自由度为n-1</p>
-<p>一元直线回归，只涉及到一个自变量，所以回归平方和的自由度为1</p>
-<p>离回归平方和的自由度等于以上两者之差n-2</p>
-<hr>
-<h3 id="直线回归的F检验"><a href="#直线回归的F检验" class="headerlink" title="直线回归的F检验"></a>直线回归的F检验</h3><p>因为方差等于平方和除以自由度：<br>$$<br>S^2_{回归}=\frac{U}{1}\<br>S^2_{离回归}=\frac{Q}{n-2}\<br>F=\frac{S^2_{回归}}{S^2_{离回归}}\<br>若F值落在F分布的右尾拒绝区，则说明直线回归关系显著<br>$$</p>
-<hr>
-<h3 id="直线回归的t检验"><a href="#直线回归的t检验" class="headerlink" title="直线回归的t检验"></a>直线回归的t检验</h3><p>$Y=\alpha+\beta X+\epsilon$</p>
-<p>$\beta$等于零，那么y与x就没有关系</p>
-<p>b的平均数是$\beta$<br>$$<br>S_b=\frac{S_{离回归}}{\sqrt{SS_x}}\<br>t=\frac{b-\beta}{S_b}=\frac{b}{S_b}<br>(假设\beta=0)<br>$$<br>若t落在$df=n-2$的t分布的双尾拒绝区内说明$\beta$与0的差异显著，即直线回归关系显著。</p>
-<p>F检验和t检验的本质完全相同。</p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743839.png" alt="image-20220406105547440"></p>
-<p>1.回归直线位于$\mu_{y/x}$的置信区间的中间。</p>
-<p>2.$\mu_{y/x}$的置信区间位于y置信区间的中间。</p>
-<p>3.随着x远离平均数时，置信区间越宽，即回归直线描述数据关系的适合度变差</p>
-<h3 id="直线回归的应用注意"><a href="#直线回归的应用注意" class="headerlink" title="直线回归的应用注意"></a>直线回归的应用注意</h3><p>•1. 描述两个变量的依存关系。</p>
-<p>•2. 在一定范围内，根据自变量对因变量进行预测。</p>
-<p>•3. 通过控制自变量来控制因变量。</p>
-<p>PS：要符合生物学意义，区分自变量和因变量，==必须检验==，外推要谨慎。</p>
-<h2 id="直线相关"><a href="#直线相关" class="headerlink" title="直线相关"></a>直线相关</h2><p>•如果不需要区分自变量和因变量，只想了解两个变量的相关程度(degree of correlation)和相关性质(character of correlation)，则可以是使用==相关系数==(correlation coefficient)来描述。</p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743649.png" alt="image-20220406110202264"></p>
-<p>相关系数</p>
-<p>若使用样本资料时<br>$$<br>r=\frac{\sum(x-\overline x)(y-\overline y)}<br>{\sqrt{\sum(x-\overline x)^2\sum(y-\overline y)^2}}<br>=\frac{SP}{\sqrt{SS_xSS_y}}<br>=\sqrt{\frac{U}{SS_y}}<br>$$<br>计算相关系数时，<strong>两个变量是平等的</strong>，不区分自变量和因变量，这是相关和回归的主要区别。</p>
-<p>相关系数的是指就是回归平方和与总平方和比率的平方根，所以==取值范围为[-1,1]==。</p>
-<p>决定系数<br>$$<br>r^2=\frac{SP^2}{SS_xSS_y}<br>=\frac{U}{SS_y}<br>$$<br>决定系数的含义是<strong>回归平方和占总平方和的比率</strong>，取值范围[0,1]。</p>
-<h3 id="直线相关的相关系数假设检验"><a href="#直线相关的相关系数假设检验" class="headerlink" title="直线相关的相关系数假设检验"></a>直线相关的相关系数假设检验</h3><p>计算出相关系数以后，并不能说明两者真的相关，还<strong>必须使用假设检验来推断</strong>，根据样本资料计算的r的理论值ρ与0的差异是否显著。<br>$$<br>S_r=\sqrt{\frac{1-r^2}{n-2}}\<br>t=\frac{r-\rho}{S_r}<br>=\frac{r}{S_r}<br>$$<br>如果t值落在$df=n-2$的t分布的拒绝区，才说明相关是显著的。</p>
-<p>•相关显著性检验的$t_r$与回归显著性检验的$t_b$是相等的，所以两个变量的<strong>回归系数和相关系数的t检验本质是完全相同的</strong>。</p>
-<p>r临界值表，查询附表8，可以发现<strong>随着df的增大，r的临界值变小</strong>，也就是说为了发现弱相关性，必须<strong>样本足够大</strong>才行。</p>
-<h3 id="直线相关的应用注意"><a href="#直线相关的应用注意" class="headerlink" title="直线相关的应用注意"></a>直线相关的应用注意</h3><p>•1. 两个变量应该都服从<strong>正态分布</strong>。</p>
-<p>•2. 相关系数<strong>必须进行检验</strong>。</p>
-<p>•3. 变量应尽可能多。</p>
-<p>•4. 相关系数显著说明两个变量之间存在相关性，到底是因果关系还是平行关系要根据生物学知识进行判断。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>==直线回归和直线相关有什么区别？==</p>
-<ol>
-<li><p>直线回归需要区别自变量和因变量，自变量一般是代表原因的量，或者是可以严格控制的量，因变量应服从正态分布；直线相关则要求两者都服从正态分布，两者的地位是完全相同的。</p>
-</li>
-<li><p><strong>直线回归一般用于研究因果关系，而直线相关一般用于研究平行关系</strong>。</p>
-</li>
-<li><p>回归系数b取值范围是负无穷到正无穷，而相关系数r的取值范围是[-1,1]。</p>
-</li>
-<li><p>b越大，说明直线的斜率越大；|r|越大，说明散点距离直线越近，或者说直线方程的拟合程度越好。</p>
-</li>
-</ol>
-<p>==•直线回归和直线相关有什么联系？==</p>
-<p>•1. r和b的正负号一定是相同的。</p>
-<p>•2. 假设检验是等价的。</p>
-<p>•3. 直线回归的F检验过程中要计算总平方和和回归平方和，而$r^2$则是回归平方和与总平方和的比值。</p>
-<p>•4. 若x和y均为正态分布时，也可以分别计算以x为自变量的回归系数，和以y为自变量的回归系数，且$r^2=b_{x/y}b_{y/x}$。</p>
+<p>举个犊子，假设==质量信息是5==，这个5看成字符，不要看成数字，那么他对应的十进制数就是53，如果使用的是Sanger测序，那么质量评分采用的就是Phred+33的形式，那么Q = 53-33=20=-10lg(errorP)，所以errorP = 0.01。也就计算出错误率啦，就便于我们进行质控。每一个碱基都有一个质量评分，所以第2行和第4行的位数是相同的。==Q值=20&gt;&gt;errorP=0.01&gt;&gt;碱基准确度就是99%。==</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914829.png" alt="image-20220406153327147"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914644.png" alt="preload"></p>
+<blockquote>
+<p>质量评分指的是一个碱基的错误概率的对数值。其最初在Phred拼接软件中定义与使用，对于每个碱基的质量编码标示，不同的软件采用不同的方案，目前有5种方案：</p>
+</blockquote>
+<ul>
+<li>Sanger，Phred quality score，值的范围从0到92，对应的ASCII码从33到126，但是对于测序数据（raw read data）质量得分通常小于60，序列拼接或者mapping可能用到更大的分数。</li>
+<li>Solexa/Illumina 1.0, Solexa/Illumina quality score，值的范围从-5到63，对应的ASCII码从59到126，对于测序数据，得分一般在-5到40之间；</li>
+<li>Illumina 1.3+，Phred quality score，值的范围从0到62对应的ASCII码从64到126，低于测序数据，得分在0到40之间；</li>
+<li>Illumina 1.5+，Phred quality score，但是0到2作为另外的标示；</li>
+<li>Illumina 1.8+ ，Phred quality score。</li>
+</ul>
+<h2 id="fasta文件"><a href="#fasta文件" class="headerlink" title="fasta文件"></a>fasta文件</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>FASTA格式是一种用于表示==核苷酸序列==或==多肽序列==的文本格式。其中碱基对或氨基酸用==单个字母==来表示，且允许在序列前添加序列名及注释。该格式已成为生物信息学领域的一项标准。</p>
+<p>FASTA简明的格式降低了序列操纵和分析的难度，令序列可被文本处理工具和诸如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Python">Python</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Ruby">Ruby</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Perl">Perl</a>等<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80">脚本语言</a>处理。</p>
+<h3 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h3><p>FASTA格式中的一条完整序列，包含开头的单行描述行和多行序列数据。描述行行首前置半角大于号（“&gt;”）以和数据行区分。“&gt;”后紧接的内容为该序列的标识符（==唯一的==），该行剩余部分则为序列的描述（标识符与描述均非必须）。“&gt;”和标识符之间不应有空格，且建议将<strong>单行内容限制在80字符以内</strong>。序列的结束以下一条序列的“&gt;”出现为标识。如下为FASTA评论区格式一条序列的示例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&gt;gi|31563518|ref|NP_852610.1 关，瓦斯4 microtubule-associated proteins 1A/1B light chain 3A isoform b [Homo sapiens]
+MKMRFFSSPCGKAAVDPADRCKEVQQIRDQHPSKIPVIIERYKGEKQLPVLDKTKFLVPDHVNMSELVKI
+IRRRLQLNPTQAFFLLVNQHSMVSVSTPIADIYEQEKDEDGFLYMVYASQETFGFIRENE<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914697.png" alt="img"></p>
+<p><strong>核苷酸序列：</strong></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914702.png" alt="preload"></p>
+<p><strong>氨基酸序列：</strong></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131914320.png" alt="img"></p>
+<h2 id="SAM文件-x2F-BAM文件"><a href="#SAM文件-x2F-BAM文件" class="headerlink" title="SAM文件/BAM文件"></a>SAM文件/BAM文件</h2><h3 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h3><p><a target="_blank" rel="noopener" href="https://www.samformat.info/sam-format-flag">官网介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dataanaly/p/13177364.html">SAM详细介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/genome_denovo/article/details/78712972">CSDN上的SAM介绍</a></p>
+<p>当我们测序得到的fastq数据map到基因组（比如用bowtie2来mapping）之后，会得到一个以sam或bam为扩展名的文件。这里，SAM的全称是<strong>sequence alignment/map format</strong>。而BAM就是SAM的二进制文件，也就是压缩格式的sam文件。</p>
+<p>SAM格式文件包括<strong>头部注释部分</strong>和<strong>比对结果部分</strong>，头部分为’’可选部分’’。头部分位于比对部分之前，以“@”开头。比对部分有11列是固定的，其他多列可选。</p>
+<p>头部信息介绍</p>
+<p>每个标题行以字符”@”开头，后面是两个字母的记录类型代码。在标题中，每一行都是由制表符分隔的。除了@CO行，每个数据字段都遵循格式”TAG:VALUE”，其中TAG是两个字母组成的字符串，定义了内容和值的格式。每个标题行应该匹配:/^ @(HD|SQ|RG|PG)(t[A-Z/a-z][A-Z/a-z/0-9]:[-~]+)+$ /或/^@CO\t.*/。小写字母是保留给用户自定义内容使用的，不会在任何版本定义中出现。以下给出了定义的记录类型和标记。<strong>当以下TAG标签出现”*“时，表示该TAG是必须的，如@SQ必须有SN和LN字段</strong>。</p>
+<p>比对信息介绍<br>比对信息部分(alignment section)，每一行表示一个片段（segment）的比对信息，包括11个必须的字段（mandatory fields）和一个可选的字段，字段之间用tab分割。必须的字段有11个，顺序固定，不可用时，根据字段定义，可以为’0’或者’*’，这是11个字段包括：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. QNAME 比对片段的（template）的编号；read name，read的名字通常包括测序平台等信息
+# eg.E00528:375:HN2JTCCXY:8:1123:5457:24479
+2. FLAG  位标识，template mapping情况的数字表示，每一个数字代表一种比对情况，这里的值是符合情况的数字相加总和
+# eg.16
+3. RNAME 参考序列的编号，如果头部注释中对SQ-SN进行了定义，这里必须和其保持一致，另外对于没有mapping上的序列，这里是'*'；
+# eg.chr1
+4. POS  比对上的位置，注意是从1开始计数，没有比对上，此处为0;
+# eg.36576599
+5. MAPQ mapping的质量，比对的质量分数，越高说明该read比对到参考基因组上的位置越唯一;
+# eg.42
+6. CIGAR 简要比对信息表达式（Compact Idiosyncratic Gapped Alignment Report），其以参考序列为基础，使用数字加字母表示比对结果，match/mismatch、insertion、deletion 对应字母 M、I、D。比如3S6M1P1I4M，前三个碱基被剪切去除了，然后6个比对上了，然后打开了一个缺口，有一个碱基插入，最后是4个比对上了，是按照顺序的；
+# eg.36M 表示36个碱基在比对时完全匹配
+
+###注：第七列到第九列是mate的信息，若是单末端测序这几列均无意义###
+
+7. RNEXT 配对片段（即mate）比对上的参考序列的编号，没有另外的片段，这里是'*'，同一个片段，用'='；
+# eg.*
+8. PNEXT 配对片段（即mate）比对到参考序列上的第一个碱基位置，若无mate,则为0；
+# eg.0
+9. TLEN  Template（文库插入序列）的长度，最左边的为正，最右边的为负，中间的不用定义正负，不分区段（single-segment)的比对上，或者不可用时，此处为0(ISIZE，Inferred fragment size.详见Illumina中paired end sequencing 和 mate pair sequencing，是负数，推测应该是两条read之间的间隔(待查证)，若无mate则为0);
+# eg.0
+10. SEQ  序列片段的序列信息，如果不存储此类信息，此处为'*'，注意CIGAR中M/I/S/=/X对应数字的和要等于序列长度；
+# eg.CGTTTCTGTGGGTGATGGGCCTGAGGGGCGTTCTCN
+11. QUAL 序列的质量信息, read质量的ASCII编码。格式同FASTQ一样。
+# eg.F-?DD&lt;,EEFFEEC?F5FA7FAF8FAF;F@E:DF&gt;FEEAFFFFFCFFC4EFDFDDFEFE=EFFF
+12.第十二列及之后：Optional fields，以tab建分割。
+# eg.AS:i:-1 XN:i:0 XM:i:1 XO:i:0 XG:i:0 NM:i:1 MD:Z:35T0 YT:Z:UU<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">\1. **QNAME**：reads名称。
+\2. **FLAG**：reads比对情况。不同的情况对应不同的值，这里的数字是所有情况的和。
+\3. **RNAME**：比对至参考序列的名称。
+\4. **POS**：比对到的位置。
+\5. **MAPQ**：比对质量。
+\6. **CIGAR**：比对情况信息。
+\7. **RNEXT**：与之配对的另一条reads所在的参考序列名称。"="表示位于同一个参考序列上，"*"表示没有另一条reads。
+\8. **PNEXT**：与之配对的另一条reads所在的位置。
+\9. **TLEN**：插入片段长度。
+\10. **SEQ**：reads序列。
+\11. **QUAL**：reads序列质量
+NH:i:n 表示reads比对到参考序列位置的个数。
+AS:i:n 表示比对得分。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="格式-2"><a href="#格式-2" class="headerlink" title="格式"></a>格式</h3><p>例</p>
+<pre class="line-numbers language-none"><code class="language-none">@HD VN:1.4	SO:coordinate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">@HD     VN:1.5  SO:unsorted     GO:query  ##输出文件第一行
+@SQ     SN:k127_19953   LN:526
+@SQ     SN:k127_3992    LN:562     ###@SQ 参考序列字典，@SQ行的顺序定义了比对文件排序顺序。
+@SQ     SN:k127_15965   LN:635     ###SN* 参考序列名字(染色体)。用于RNAME和PNEXT比对的记录
+@SQ     SN:k127_32914   LN:521     ###LN* 参考序列长度，范围:[$1,2^{31}-1$]
+@SQ     SN:k127_35905   LN:622     ###
+@SQ     SN:k127_7984    LN:664     ###
+@SQ     SN:k127_17959   LN:506     ###
+@SQ     SN:k127_20950   LN:547     ###
+@SQ     SN:k127_11976   LN:697     ###
+@SQ     SN:k127_26932   LN:770     ###
+@SQ     SN:k127_2995    LN:515     ###
+@SQ     SN:k127_23941   LN:826     ###
+@SQ     SN:k127_41887   LN:788     ###
+@SQ     SN:k127_14968   LN:970     ###
+@SQ     SN:k127_8983    LN:511     ###<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none"># 例如
+@SQ	SN:chr1	LN:249250621	M5:1b22b98cdeb4a9304cb5d48026a85128	UR:file:/opt/biosoft/ref/sv/hg19_ref_genome.primary-assembly.fa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">E00514:173:H3C3JCCXY:4:1124:12398:67234    337 Chr00   32904   0   150M    Chr09   33498107    0   TCAATTTCACTTGAAGCTTACTTGTAGTTTCAGGCTTGGTCAAGCGCGATACAAACCATGTAGTAGGAGTCCTCCAAGTCGCCAAGCTAGGGGATCTGCTGAAAGAGGTGACAGACAAGGTAAGCAATCAGAGCTCTAAGCAATCAGTCC  iieiiiii`eiiiiiiiiiiiiiiieiiiiiiiieiiiiiiiiiiiiiiiiiiiiieiiiiiiiiiiiiieiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieiiiiiiiii`iiieeieieeieee``  AS:i:-6 XN:i:0  XM:i:1  XO:i:0  XG:i:0  NM:i:1  MD:Z:136C13 YT:Z:UU NH:i:8  CC:Z:Chr10  CP:i:18604313   HI:i:0  RG:Z:J36CK1
+E00514:173:H3C3JCCXY:4:1124:12398:67234    369 Chr00   32904   0   150M    Chr16   2469225 0   TCAATTTCACTTGAAGCTTACTTGTAGTTTCAGGCTTGGTCAAGCGCGATACAAACCATGTAGTAGGAGTCCTCCAAGTCGCCAAGCTAGGGGATCTGCTGAAAGAGGTGACAGACAAGGTAAGCAATCAGAGCTCTAAGCAATCAGTCC  iieiiiii`eiiiiiiiiiiiiiiieiiiiiiiieiiiiiiiiiiiiiiiiiiiiieiiiiiiiiiiiiieiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieiiiiiiiii`iiieeieieeieee``  AS:i:-6 XN:i:0  XM:i:1  XO:i:0  XG:i:0  NM:i:1  MD:Z:136C13 YT:Z:UU NH:i:8  CC:Z:Chr10  CP:i:18604313   HI:i:2  RG:Z:J36CK1
+E00514:173:H3C3JCCXY:4:1124:12398:67234    369 Chr00   32904   0   150M    Chr16   29515410    0   TCAATTTCACTTGAAGCTTACTTGTAGTTTCAGGCTTGGTCAAGCGCGATACAAACCATGTAGTAGGAGTCCTCCAAGTCGCCAAGCTAGGGGATCTGCTGAAAGAGGTGACAGACAAGGTAAGCAATCAGAGCTCTAAGCAATCAGTCC  iieiiiii`eiiiiiiiiiiiiiiieiiiiiiiieiiiiiiiiiiiiiiiiiiiiieiiiiiiiiiiiiieiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiieiiiiiiiii`iiieeieieeieee``  AS:i:-6 XN:i:0  XM:i:1  XO:i:0  XG:i:0  NM:i:1  MD:Z:136C13 YT:Z:UU NH:i:8  CC:Z:Chr10  CP:i:18604313   HI:i:4  RG:Z:J36CK1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="GTF和GFF文件"><a href="#GTF和GFF文件" class="headerlink" title="GTF和GFF文件"></a>GTF和GFF文件</h2><h3 id="概念-3"><a href="#概念-3" class="headerlink" title="概念"></a>概念</h3><p>GTF全称是Gene transfer format，用于储存基因结构信息，总共有9列。关于gtf文件，我在文章：<strong>生信中各种ID转换</strong>中就已经有所应用。我之前在<strong>TCGA</strong><a target="_blank" rel="noopener" href="https://cloud.tencent.com/solution/database?from=10680"><strong>数据库</strong></a><strong>差异分析</strong>的文章中，也是通过gtf文件进行ID转换的。</p>
+<h3 id="格式-3"><a href="#格式-3" class="headerlink" title="格式"></a>格式</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131915893.png" alt="preload"></p>
 
                 
             </div>
@@ -667,7 +716,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/">https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/</a>
+                    <a href="https://cling5899.github.io/2022/01/01/01common-data-file-formats-in-bioinformatics/">https://cling5899.github.io/2022/01/01/01common-data-file-formats-in-bioinformatics/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -705,12 +754,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">学习笔记</span>
+                                <a href="/tags/Data-File-Formats/">
+                                    <span class="chip bg-color">Data File Formats</span>
                                 </a>
                             
-                                <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
-                                    <span class="chip bg-color">生物统计学</span>
+                                <a href="/tags/%E7%94%9F%E4%BF%A1%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/">
+                                    <span class="chip bg-color">生信数据格式</span>
                                 </a>
                             
                         </div>
@@ -762,70 +811,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/09/binning-metabat2/">
+                <a href="/2022/02/01/biostatistics-chapter1-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="分箱Binning-MetaBAT2">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Biostatistics课程学习笔记Chapter1-5">
                         
-                        <span class="card-title">分箱Binning-MetaBAT2</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            分箱Binning-MetaBAT2实战操作
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
-                                    宏基因组
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Bin/">
-                        <span class="chip bg-color">Bin</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%86%E7%AE%B1/">
-                        <span class="chip bg-color">分箱</span>
-                    </a>
-                    
-                    <a href="/tags/MetaBAT2/">
-                        <span class="chip bg-color">MetaBAT2</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/08/biostatistics-chapter6/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Biostatistics生物统计学第六讲方差分析">
-                        
-                        <span class="card-title">Biostatistics生物统计学第六讲方差分析</span>
+                        <span class="card-title">Biostatistics课程学习笔记Chapter1-5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -835,9 +827,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -859,6 +851,60 @@
                     
                     <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
                         <span class="chip bg-color">生物统计学</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/01/01/01common-data-file-formats-in-bioinformatics/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Common Data File Formats in Bioinformatics">
+                        
+                        <span class="card-title">Common Data File Formats in Bioinformatics</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            生物信息学当中常见的数据格式及意义
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    课程笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Data-File-Formats/">
+                        <span class="chip bg-color">Data File Formats</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%94%9F%E4%BF%A1%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">生信数据格式</span>
                     </a>
                     
                 </div>
