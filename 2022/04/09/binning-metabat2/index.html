@@ -1,0 +1,1135 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="分箱Binning-MetaBAT2, Cling&#39;s Blog">
+    <meta name="description" content="分箱Binning-MetaBAT2实战操作">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>分箱Binning-MetaBAT2 | Cling&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.1.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Cling&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Cling&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Cling
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">分箱Binning-MetaBAT2</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Bin/">
+                                <span class="chip bg-color">Bin</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%88%86%E7%AE%B1/">
+                                <span class="chip bg-color">分箱</span>
+                            </a>
+                        
+                            <a href="/tags/MetaBAT2/">
+                                <span class="chip bg-color">MetaBAT2</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
+                                宏基因组
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-09
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-05-13
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p><span class="github-emoji"><span>🏃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c3.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>以下均为我<strong>个人</strong>在宏基因组学习过程中的笔记，参考性不大,参考链接很靠谱。<span class="github-emoji"><span>🙋</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64b.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>有什么想找的请直接Ctrl + F （我写的很乱）<span class="github-emoji"><span>😺</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f63a.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+</blockquote>
+<blockquote>
+<p>下面<span class="github-emoji"><span>🏃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c3.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>这些链接是我在学习中的参考文章</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/66ab14988a74">https://www.jianshu.com/p/66ab14988a74</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54080691">https://zhuanlan.zhihu.com/p/54080691</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/64607571">https://zhuanlan.zhihu.com/p/64607571</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/BHCs2Y97jXL-2kInlu49UA">https://mp.weixin.qq.com/s/BHCs2Y97jXL-2kInlu49UA</a></p>
+</blockquote>
+<h1 id="分箱Binning-MetaBAT2"><a href="#分箱Binning-MetaBAT2" class="headerlink" title="分箱Binning-MetaBAT2"></a>分箱Binning-MetaBAT2</h1><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935933.png" alt="image-20220331153743110"></p>
+<p>宏基因组分箱（Binning）是将宏基因组测序得到的混合了不同生物的序列或序列组装得到的<strong>contigs</strong>按==物种分开归类==的过程，类似下图。传统的单物种全基因组序列都是经纯培养之后，再进行全基因组de novo测序才获得的，但是环境中存在着大量的不可培养微生物，宏基因组分箱技术有助于<strong>获得不可培养微生物的全基因组序列</strong>，获得新物种的基因组==序列和功能==，预测未知物种的培养方法等等。</p>
+<p><strong>关联分析</strong></p>
+<p>即通过binning得到的bins（暂且简称为bins，更确切的说是strain-level clusters 或strain-level taxonomic units）可以进行宏基因组关联分析以及多组学联合分析，将特定功能代谢产物与特定物种、特定基因进行关联研究，推动其因果机制的探究，为疾病监控、环境监测提供了菌株水平的生物靶标</p>
+<p><strong>单菌组装</strong></p>
+<p>通过对binning得到的bins进行后续组装，可以得到很多不能在实验室里培养的细菌、古菌、病毒的基因组草图，然后根据单菌组装结果进行菌株水平的基因和功能注释、比较基因组分析、进化分析等，使我们得以洞察这些无法在实验室培养获得的菌株的生态适应机制，营养互作机制和新陈代谢功能等，可以研究在生态环境和复杂疾病中起重要作用的菌种以及致病菌和宿主的互作机制及其微进化机制。</p>
+<h2 id="工具选择：MetaBAT2（2022年3月）"><a href="#工具选择：MetaBAT2（2022年3月）" class="headerlink" title="工具选择：MetaBAT2（2022年3月）"></a>工具选择：MetaBAT2（2022年3月）</h2><p>MetaBAT2 <a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=12807292371087613086&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=zh-CN">被引用次数：602</a>        MetaBAT2在单样本分箱中表现最佳</p>
+<p><strong>PeerJ  2019最好</strong><br>MetaWRAP <a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=17296056393600541986&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=zh-CN">被引用次数：413</a>       </p>
+<p>MetaBAT <a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=14563814112204661553&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=zh-CN">被引用次数：1151</a></p>
+<p><strong>PeerJ</strong>CONCOCT <a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=10199958528531741910&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=zh-CN">被引用次数：60</a>   能获得最多的bin</p>
+<p><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cluster=2120866697955990770&amp;hl=zh-CN&amp;as_sdt=2005&amp;sciodt=0,5">MaxBin 2.0</a><a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?cites=2120866697955990770&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=zh-CN">被引用次数：820</a>  2017年Nature Methods的评估中最好</p>
+<p><strong>宏基因组最佳分箱工具Metabat2</strong></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><pre class="line-numbers language-none"><code class="language-none">bowtie2-build --threads 30 /home/hanmz/project/RA/PRJNA356102/assembly/SRR5091489/SRR5091489.contigs.fa ./assembly/SRR5091489/SRR5091489-contigs_fa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">bowtie2 -p 40 --local --very-sensitive-local -x ./assembly/SRR5091489/SRR5091489-contigs_fa -1 /home/hanmz/project/RA/PRJNA356102/rawdata/SRR5091489_1_paired.fastq.gz -2 /home/hanmz/project/RA/PRJNA356102/rawdata/SRR5091489_2_paired.fastq.gz -S ./assembly/SRR5091489/SRR5091489_contigs.sam<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">samtools sort --threads 46 ./assembly/SRR5091489/SRR5091489_contigs.sam -o ./assembly/SRR5091489/SRR5091489_contigs.sort.bam<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">jgi_summarize_bam_contig_depths --outputDepth ./assembly/SRR5091489/SRR5091489_depth.txt ./assembly/SRR5091489/SRR5091489_contigs.sort.bam<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">metabat2 -i /home/hanmz/project/RA/PRJNA356102/assembly/SRR5091489/SRR5091489.contigs.fa -a ./assembly/SRR5091489/SRR5091489_depth.txt -o ./assembly/SRR5091489/bin/SRR5091489_bin -t 46 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935688.png" alt="image-20220331154620680"></p>
+<p>得到以上文件</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935237.png" alt="image-20220331154842083"></p>
+<p>_depth.txt文件为<strong>统计contig深度</strong>得到的文件</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935588.png" alt="image-20220331154959721"></p>
+<p>bin目录下为.fa文件，==为分箱结果==</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935592.png" alt="image-20220331154724677"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935925.png" alt="Bin采用的方法"></p>
+<h1 id="Binning评估-CheckM"><a href="#Binning评估-CheckM" class="headerlink" title="Binning评估-CheckM"></a>Binning评估-CheckM</h1><hr>
+<p>该软件的评估结果会给出==completeness==和==contamination==两个指标。同时也可以结合常用来检验样品污染的GC-Depth分布图来看是否存在污染，是否是chimeric genome bins。</p>
+<blockquote>
+<p>相关链接</p>
+<p>checkM的GitHub<a target="_blank" rel="noopener" href="https://github.com/Ecogenomics/CheckM">https://github.com/Ecogenomics/CheckM</a></p>
+<p>checkM的database<a target="_blank" rel="noopener" href="https://data.ace.uq.edu.au/public/CheckM_databases/">https://data.ace.uq.edu.au/public/CheckM_databases/</a></p>
+<p>checkM说明文档<a target="_blank" rel="noopener" href="https://github.com/Ecogenomics/CheckM/wiki">https://github.com/Ecogenomics/CheckM/wiki</a></p>
+<p>安装指导：</p>
+<p><a target="_blank" rel="noopener" href="https://shenmengyuan.github.io/2016/12/22/checkm/%E7%9B%B8%E5%BD%93%E8%AF%A6%E7%BB%86:heart_eyes::star::raising_hand">https://shenmengyuan.github.io/2016/12/22/checkm/相当详细<span class="github-emoji"><span>😍</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f60d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>:raising_hand</a>:</p>
+</blockquote>
+<h2 id="CheckM官方文档有道翻译"><a href="#CheckM官方文档有道翻译" class="headerlink" title="CheckM官方文档有道翻译"></a><strong>CheckM官方文档有道翻译</strong></h2><p>CheckM提供了一套工具，用于==评估==从分离物、单细胞或宏基因组中恢复的基因组的==质量==。<br>它通过使用在系统进化谱系中普遍存在的==单拷贝的基因组合==，提供了对基因组==完整性和污染的可靠估计==。<br>基因组质量的评估也可以使用描绘关键基因组特征(例如，GC，编码密度)的图来检查，这些图突出了典型基因组预期分布之外的序列。<br>CheckM还提供了一些工具，用于根据标记集的兼容性、基因组特征的相似性和参考基因组树的邻近性来识别可能需要合并的基因组箱。</p>
+<p>如果你计划处理大量的基因组，你可能希望把它们分成小批量。<br>在64GB的机器上，用40个线程同时运行1000个基因组，运行得很好。<br>超过机器的可用内存将导致checkkm使用交换空间(与任何程序一样)，这将大大增加处理基因组的时间。</p>
+<h3 id="Bioinformatic-tool-dependencies"><a href="#Bioinformatic-tool-dependencies" class="headerlink" title="Bioinformatic tool dependencies"></a>Bioinformatic tool dependencies</h3><p>CheckM requires the following programs to be <a target="_blank" rel="noopener" href="http://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path">added to your system path</a>:</p>
+<p><a target="_blank" rel="noopener" href="http://hmmer.org/">HMMER</a> (&gt;=3.1b1)</p>
+<blockquote>
+<p>安装之后还有几步需要操作，可以看下载的帮助文档</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/hyattpd/Prodigal">prodigal</a> (2.60 or &gt;=2.6.1)</p>
+<p><a target="_blank" rel="noopener" href="http://matsen.fhcrc.org/pplacer/">pplacer</a> (&gt;=1.1)guppy是pplacer的一部分也必须添加到环境变量中</p>
+<p>推荐使用pip安装CheckM：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip3是在Python3中的pip
+pip3 install numpy
+pip3 install matplotlib
+pip3 install pysam
+pip3 install checkm-genome<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Required-reference-data参考数据库的下载"><a href="#Required-reference-data参考数据库的下载" class="headerlink" title="Required reference data参考数据库的下载"></a>Required reference data参考数据库的下载</h3><p>CheckM relies on a number of precalculated data files which can be downloaded from <a target="_blank" rel="noopener" href="https://data.ace.uq.edu.au/public/CheckM_databases/">https://data.ace.uq.edu.au/public/CheckM_databases/</a>. Decompress the file to an appropriate folder and run the following to inform CheckM of where the files have been placed:</p>
+<pre class="line-numbers language-none"><code class="language-none">&gt; checkm data setRoot &lt;checkm_data_dir&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">#测试数据
+~/biosoft/metabat_data
+$ checkm test ~/checkm_test_results
+####结果
+[2022-03-31 19:57:20] INFO: [Passed]
+[2022-03-31 19:57:20] INFO: { Current stage: 0:00:00.005 || Total: 0:05:17.882 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131935369.png" alt="checkm_test_results"></p>
+<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><blockquote>
+<p>参考链接<a target="_blank" rel="noopener" href="http://www.mselab.cn/detail/81/%E5%BF%AB%E7%9C%8B%E5%AE%83:+1::+1::+1::+1::+1">http://www.mselab.cn/detail/81/快看它:+1::+1::+1::+1::+1</a>:</p>
+</blockquote>
+<p>基因组组装或者宏基因组分箱 (binning) 获得的草图数据，首先需要评估其<strong>质量</strong>，包括<strong>基因组完整度</strong>、<strong>污染度</strong>、<strong>序列分布</strong>等信息。最用的软件有 <a target="_blank" rel="noopener" href="https://ecogenomics.github.io/CheckM/">CheckM</a>。</p>
+<p>CheckM 提供了一系列工具用于评估从分离培养、单细胞、宏基因组获得的基因组<strong>质量</strong>，可以根据基因组在<strong>参考基因组发育树中的位置</strong>来推断其精确的<strong>单拷贝标记基因集</strong> (lineage-specific marker set)，同时也提供数据库可用的基于分类学的基因集 (taxonomic-specific marker set)。</p>
+<p>CheckM 利用基因的<strong>单拷贝性</strong>来有效的估计基因组完整度和污染可能性，同时能绘制基因组关键特征 (例如：GC含量) 的图像来评估基因组的质量。</p>
+<p>还可以进一步从每一个分箱中找出<strong>16S rRNA基因</strong>，以便于后续对所拼装达到的菌种的分类信息进行鉴定。</p>
+<pre class="line-numbers language-none"><code class="language-none">(py37) [chenl@cpu4 ~]$ whereis checkm
+checkm: /home/chenl/miniconda2/envs/py37/bin/checkm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><pre class="line-numbers language-none"><code class="language-none">checkm lineage_wf -t 45 -x fa --nt --tab_table -f /home/chenl/RA/PRJNA356102/assembly/SRR5091489/result-bin/SRR5091489_bins_qa.txt /home/chenl/RA/PRJNA356102/assembly/SRR5091489/bin /home/chenl/RA/PRJNA356102/assembly/SRR5091489/result-bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>求求给个三连再走</p>
+<p><span class="github-emoji"><span>📢</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4e2.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙇</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f647.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>:+1:<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>💓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f493.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<pre class="line-numbers language-none"><code class="language-none">checkm lineage_wf -t 46 -x fa --nt --tab_table -f bins_qa.txt metabat_bins bin_qa_result <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>完整度是实际上有的Mark基因除以应该有的基因</p>
+<p>污染度是bin里包含的基因有多少不属于这个bin的（幅度大）</p>
+<pre class="line-numbers language-none"><code class="language-none">checkm unbinned<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Cling</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://cling5899.github.io/2022/04/09/binning-metabat2/">https://cling5899.github.io/2022/04/09/binning-metabat2/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Cling</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Bin/">
+                                    <span class="chip bg-color">Bin</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%88%86%E7%AE%B1/">
+                                    <span class="chip bg-color">分箱</span>
+                                </a>
+                            
+                                <a href="/tags/MetaBAT2/">
+                                    <span class="chip bg-color">MetaBAT2</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/04/10/16srna-gene/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="微生物多样性数据分析（16S）">
+                        
+                        <span class="card-title">微生物多样性数据分析（16S）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            微生物多样性数据分析（16S）
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/16s/" class="post-category">
+                                    16s
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+                        <span class="chip bg-color">生物信息学</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">数据分析</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/09/linear-regression-and-correlation-analysis/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Biostatistics生物统计学第七讲Linear regression and correlation analysis">
+                        
+                        <span class="card-title">Biostatistics生物统计学第七讲Linear regression and correlation analysis</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文为个人在学习生物统计学时的学习笔记，有什么错误或指教请联系我。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    课程笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
+                        <span class="chip bg-color">生物统计学</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Cling&#39;s Blog<br />'
+            + '文章作者: Cling<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者Cling所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <a href="/about" target="_blank">Cling</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">23.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Cling5899" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:cling5899@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1480623404" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1480623404" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/cling5899" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/cling5899" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
