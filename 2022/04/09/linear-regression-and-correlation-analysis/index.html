@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Biostatistics课程学习笔记Chapter1-5, Cling&#39;s Blog">
+    <meta name="keywords" content="Biostatistics生物统计学第七讲Linear regression and correlation analysis, Cling&#39;s Blog">
     <meta name="description" content="本文为个人在学习生物统计学时的学习笔记，有什么错误或指教请联系我。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Biostatistics课程学习笔记Chapter1-5 | Cling&#39;s Blog</title>
+    <title>Biostatistics生物统计学第七讲Linear regression and correlation analysis | Cling&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Biostatistics课程学习笔记Chapter1-5</h1>
+                    <h1 class="description center-align post-title">Biostatistics生物统计学第七讲Linear regression and correlation analysis</h1>
                 </div>
             </div>
         </div>
@@ -461,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-07
+                    2022-04-09
                 </div>
                 
 
@@ -475,14 +475,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.1k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    8 分
                 </div>
                 
 
@@ -505,408 +505,142 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="生物统计学-biostatistics"><a href="#生物统计学-biostatistics" class="headerlink" title="生物统计学(biostatistics)"></a>生物统计学(biostatistics)</h1><p>[TOC]</p>
-<h2 id="第一章绪论"><a href="#第一章绪论" class="headerlink" title="第一章绪论"></a>第一章绪论</h2><blockquote>
-<p><em><strong>定义</strong></em>：<strong>用数理统计的原理和方法来分析和解释生物界各种现象和试验调查资料的一门学科</strong></p>
+                <h1 id="Linear-regression-and-correlation-analysis"><a href="#Linear-regression-and-correlation-analysis" class="headerlink" title="Linear regression and correlation analysis"></a>Linear regression and correlation analysis</h1><blockquote>
+<p>•第五章中，我们介绍了如何研究两个定性变量是否有关系的问题。</p>
+<p>•实际工作中，我们经常需要研究两个或两个以上定量变量是否有关系，有怎么样的关系。</p>
+<p>•对于生物学数据，因为存在随机性和变异性等，所以通常不能推导出确定的函数关系，但是可以使用统计学上的回归与相关分析研究其分布情况(如平均数、标准差和置信区间)。</p>
 </blockquote>
-<blockquote>
-<p>生物的特点：随机性、变异性、复杂性</p>
-</blockquote>
-<h3 id="常用统计学术语"><a href="#常用统计学术语" class="headerlink" title="常用统计学术语"></a>常用统计学术语</h3><p>•同质(homogeneity)：根据研究目的所确定的观察单位其性质应大致相同。</p>
-<p>•变异(variation)：即使性质相同的事物，由于存在个体差异，同一指标的测量结果也不同。</p>
-<p>•总体(population)：具有相同性质的个体所组成的集合，指研究对象的全体。（有限总体、无限总体）</p>
-<p>•个体(individual)：组成总体的基本单位。</p>
-<p>•样本(sample)：从总体中抽出的有代表性的若干个体所构成的集合。（通常把n≤30的样本叫小样本， n&gt;30的样本叫大样本）</p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131731199.png" alt="image-20220320151429330" style="zoom:33%;">
-
-<p>•参数(参量)(parameter)：对一个总体特征的度量。•常用希腊字母表示μ、σ</p>
-<p>•统计数(统计量)(statistic)：由样本计算所得的数值。•常用英文字母表示<strong>s、x</strong></p>
-<p>•变量(variable)：相同性质的事物间表现差异性的某项特征或者性状。</p>
-<p>•常量(constant)：对总体来说不会变化的变量，例如总体平均数等。</p>
-<p>•因素(factor)：试验中所研究的影响试验指标的原因或原因组合。</p>
-<p>•(因素)水平(level)：每个因素的不同状态。</p>
-<p>处理(treatment)与重复(repetition)、效应(effect)与互作(interaction)、准确性(accuracy)与精确性(precision)、误差(error)与错误(mistake)、概率(probability)</p>
-<blockquote>
-<p>生物统计学的内容</p>
-</blockquote>
-<h3 id="试验设计-experimental-design"><a href="#试验设计-experimental-design" class="headerlink" title="试验设计(experimental design)"></a>试验设计(experimental design)</h3><p>•取样是否有代表性？是否随机？对照、重复、几个因素、几个水平、是否排除无关因素</p>
-<p><strong>统计分析(statistical analysis)</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>数据整理</strong></th>
-<th align="center"><strong>数据检查</strong></th>
-<th align="center"><strong>变量转换</strong></th>
-<th align="center"><strong>数据分布</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>统计描述</strong></td>
-<td align="center"><strong>统计指标</strong></td>
-<td align="center"><strong>统计表</strong></td>
-<td align="center"><strong>统计图</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>统计推断</strong></td>
-<td align="center"><strong>参数估计</strong></td>
-<td align="center"><strong>假设检验</strong></td>
-<td align="center"><strong>方差分析等</strong></td>
-</tr>
-</tbody></table>
-<p><strong>•SPSS(statistical package for the social sciences)</strong></p>
+<p>因果关系与平行关系</p>
+<p>•经常地，我们发现一个变量随着另一个变量的变化而变化，但是这不一定说明两者存在<strong>因果关系</strong>。</p>
+<p>•还有一种可能是这两者共同受到另外一个变量的影响，称为<strong>平行关系</strong>。</p>
 <hr>
-<h2 id="第二章资料整理与特征数计算"><a href="#第二章资料整理与特征数计算" class="headerlink" title="第二章资料整理与特征数计算"></a>第二章资料整理与特征数计算</h2><h3 id="资料的类型"><a href="#资料的类型" class="headerlink" title="资料的类型"></a>资料的类型</h3><p>资料(data)：在生物学试验及调查中能够获得大量的原始数据，是在一定条件下对某种具体事物或现象观察的结果，称之为<strong>资料。资料就是变量的值</strong>。</p>
-<table>
-<thead>
-<tr>
-<th><strong>对某种现象</strong>只能观察不能测量的资料</th>
-<th><strong>一般是由</strong>计数和测量<strong>得到的。</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>质量性状(qualitative character)资料</td>
-<td>数量性状(quantitative character)资料</td>
-</tr>
-<tr>
-<td>花瓣的颜色</td>
-<td>鱼尾数，玉米籽粒数</td>
-</tr>
-<tr>
-<td>治疗疾病的痊愈，好转</td>
-<td>高度，重量</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>•<strong>生物统计学归根结底就是用样本来估计总体的问题，所以统计分析的基础就是样本的搜集。</strong></p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131731791.png" alt="image-20220320172117236"></p>
-<p>试验(experiment):•对一定数量的有代表性试验单位，在一定条件下进行有探索性的研究工作。<strong>遵循随机、重复和局部控制三项基本原则</strong></p>
-<h3 id="资料的整理"><a href="#资料的整理" class="headerlink" title="资料的整理"></a>资料的整理</h3><p>更正缺失数据、重复值和异常值</p>
-<p>利用SPSS软件绘制</p>
-<p>频数分布表(frenqucy table)、条形图(bar chart)、直方图(histogram)、饼图(pie chart)、散点图(scatter chart)</p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131731297.png" alt="image-20220320173010069" style="zoom:50%;">
-
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131731802.png" alt="image-20220320173049457" style="zoom:50%;">
-
-<h3 id="资料特征数的计算"><a href="#资料特征数的计算" class="headerlink" title="资料特征数的计算"></a>资料特征数的计算</h3><p><strong>变量的分布具有两个明显的基本特征</strong></p>
-<p><strong>集中性</strong>(centrality)•反映集中性的特征数是平均数。</p>
-<p><strong>离散性</strong>(discreteness)•反映离散性的特征数是变异数。</p>
-<p>平均数(mean)：算术平均数、中位数、众数、几何平均数(geometric mean)</p>
-<p>中位数(median)、众数(mode):<strong>适用于服从偏态分布的数据</strong></p>
-<p>变异数(variance)：<strong>极差</strong>(range)、<strong>方差</strong>(variance)、<strong>标准差</strong>(standard deviation)、<strong>四分位数间距</strong>(quartile range)、<strong>变异系数</strong>(coefficient of variability)</p>
-<p>标准差是衡量变量资料变异程度的<strong>最好指标</strong></p>
-<p>•1. 标准差受到<strong>所有观测值的影响。</strong></p>
-<p>•2. 将各观测值减去一个常数a，其标准差不变；将各观测值乘以一个常数a，其标准差扩大了a倍。</p>
-<p>•3. 标准差和平均数一样，与观测值具有相同的<strong>单位。</strong></p>
-<p>•4. 因为利用了算术平均数，所以同样不适合<strong>偏态分布。</strong></p>
-<p>Q1，Q2和Q3恰好把资料分成四个相同大小的组分，所以叫四分位数，•<strong>四分位数间距Q=Q3-Q1。</strong></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732264.png" alt="img"></p>
-<p>**变异系数<u>没有单位</u>**：标准差除以样本平均数乘以100%</p>
-<p><strong>算术平均数总是大于几何平均数</strong></p>
-<h2 id="第三章概率分布"><a href="#第三章概率分布" class="headerlink" title="第三章概率分布"></a>第三章概率分布</h2><blockquote>
-<p><strong>生物统计学最主要的任务是用样本统计数来推断其所属总体的参数</strong></p>
-<p><strong>从同一总体中随机抽取样本，每次得到的样本不会完全相同，用不同样本去推断同一总体将得到不同的结论，如何判断这些结论的可靠性</strong></p>
-<p>•这些推断的基础是关于<strong>概率分布的基本知识，以及抽样分布。</strong></p>
-</blockquote>
-<h3 id="概率基础知识"><a href="#概率基础知识" class="headerlink" title="概率基础知识"></a>概率基础知识</h3><ol>
-<li><p>•必然事件**(certain event)，以U表示。**</p>
+<p>散点图(scatter chart):直观的查看x、y的关系。</p>
+<ol>
+<li><p>两个变量间关系的性质和程度；</p>
 </li>
-<li><p>•不可能事件**(impossible event)，以V表示。**</p>
+<li><p>两个变量间关系的类型，是直线型或者曲线型。</p>
 </li>
-<li><p>•随机事件**(random event，简称事件)，指在某些确定条件下，因为偶然因素的影响而可能出现也可能不出现的现象。**</p>
-</li>
-<li><p>和事件(sum event):<strong>A+B</strong>至少有一件事发生</p>
-</li>
-<li><p>积事件(product event)：<strong>A·B</strong>多个事件<strong>同时发生</strong></p>
-</li>
-<li><p>互斥事件(mutually exclusive event)：<strong>A·B=V</strong>，不可能同时发生</p>
-</li>
-<li><p>对立事件(contrary event)：<strong>A+B=U，A·B=V</strong>，必有一件事发生</p>
-</li>
-<li><p>完全事件系(complete event system)：A**1+A2+……+An=U，Ai·Aj=V(当i不等于j时)**，多个事件两两相斥</p>
-</li>
-<li><p>独立事件(independent event)：两者毫无关系</p>
-</li>
-<li><p>加法定理<strong>P(A+B)=P(A)+P(B)-P(A·B)</strong></p>
-</li>
-<li><p>乘法定理<strong>P(A·B)=P(A|B)·P(B)= P(B|A)·P(A)</strong></p>
-</li>
-<li><p>频率(frequency)：<strong>即某事件发生的次数除以重复试验次数</strong></p>
-</li>
-<li><p>概率(probability)：随着重复试验次数不断增大，某事件发生的频率越来越接近某一固定值p，p就定义为该事件发生的概率。（一般情况下，因为重复试验的次数是有限的，所以<strong>频率只是概率的一个近似值。</strong>）</p>
-<p>•<strong>频率是试验中真实观察到的概率，概率是理论上的频率。</strong></p>
-<p>•<strong>频率是样本的统计数，概率是总体的参数。</strong></p>
+<li><p>是否有异常观测值的干扰</p>
 </li>
 </ol>
-<h3 id="概率分布（已知总体推样本）"><a href="#概率分布（已知总体推样本）" class="headerlink" title="概率分布（已知总体推样本）"></a>概率分布（已知总体推样本）</h3><p>概率分布**(probability distribution)：**随机变量的取值与取这些值的概率之间的对应关系</p>
-<p>离散型变量的分布：二项分布、泊松分布<strong>……</strong></p>
-<p>连续型变量的分布：正态分布、<strong>t分布、卡方分布、F分布</strong></p>
-<p>二项分布(binomial distribution)：<strong>结果只有两种情况的事件组成的总体的概率分布</strong>，<strong>试验具有重复性和独立性</strong>		<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732085.png" alt="image-20220320190042568" style="zoom: 50%;"></p>
-<p>泊松分布(poisson distribution)：就是p值很小，但n值很大的特殊情况的二项分布</p>
-<p>​		<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732905.png" alt="image-20220325203604144" style="zoom: 50%;"></p>
-<p>​	•泊松分布的平均数和方差均为λ。</p>
-<p>​	<strong>•二项分布当p&lt;0.1且np&lt;5时</strong>，可以用泊松分布来近似计算。</p>
-<p>​	•泊松分布的形状参数λ无限增大时，泊松分布接近正态分布。</p>
-<p>正态分布(normal distribution)：<strong>随机误差****一般服从正态分布</strong></p>
-<p>​		<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732070.png" alt="image-20220320191202699" style="zoom:50%;"></p>
-<p>​		•该正态分布记为N(μ, σ2)，其中μ是正态分布的平均数，σ是正态分布的标准差。</p>
-<p>​		•变量落在 (μ-σ, μ+σ)范围内的概率是68.26%；</p>
-<p>​		•变量落在(μ-2σ, μ+2σ)范围内的概率是95.45%。</p>
-<p>​		μ决定f(x)的位置，μ增大，曲线右移。</p>
-<p>​		σ决定f(x)的性状，σ增大，曲线越宽矮。</p>
-<p>•P(-1.96&lt;x&lt;1.96)=0.95•P(-2.58&lt;x&lt;2.58)=0.99</p>
-<blockquote>
-<p><strong>生物统计学的研究包含两个过程：从总体抽取样本的过程，从样本统计数推断总体参数的过程</strong></p>
-</blockquote>
-<p>重置抽样也称“回置抽样”、“重复抽样”或“有<strong>放回的抽样”</strong></p>
-<h4 id="若只有一个总体"><a href="#若只有一个总体" class="headerlink" title="若只有一个总体"></a>若只有一个总体</h4><blockquote>
-<p>样本平均数分布性质</p>
-<p>（1）样本平均数分布的平均数等于总体平均数</p>
-<p>（2）样本平均数分布的方差等于总体方差<em><strong>除以样本容量</strong></em></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>只有一个总体</th>
-<th>有两个总体</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>u分布（标准正态分布）</td>
-<td>已知总体方差时，u检验可以用于比较总体平均数</td>
-</tr>
-<tr>
-<td>t分布（从平均数μ，标准差未知的正态总体中，随机抽取含量为n的样本）</td>
-<td>已知样本方差时，t检验可以用于比较总体平均数</td>
-</tr>
-<tr>
-<td>卡方分布（μ，σ的正态总体中，独立随机地抽取k个含量为n的样本）</td>
-<td>已知两个总体的标准差时，F检验可以用于比较总体的方差</td>
-</tr>
-</tbody></table>
 <hr>
-<p>u分布：当μ=0，σ=1时，N(0，1)被称为标准正态分布，又称为u分布，F(u)</p>
-<p>t分布:不服从正态分布，服从自由度为n-1,是从平均数为μ，==样本容量不大==*==标准差未知==*的正态总体中，独立随机地抽取含量为n的样本产生的分布。</p>
-<p>卡方分布：从平均数为μ，标准差为σ的正态总体中，独立随机地抽取k个含量为n的样本</p>
-<p>​		•卡方分布的取值范围是0到正无穷；</p>
-<p>​		•曲线不对称，峰值偏左(特别在df=1时，曲线以y轴为渐近线)。</p>
-<p>​		•随着自由度df增大，卡方分布趋于左右对称直至正态分布。</p>
-<h4 id="若需要比较两个总体"><a href="#若需要比较两个总体" class="headerlink" title="若需要比较两个总体"></a>若需要比较两个总体</h4><blockquote>
-<p>样本平均数差数分布的基本性质</p>
-<p>（1）样本平均数差数的平均数等于总体平均数的差数（或样本平均数分布的平均数的差数）</p>
-<p>（2）样本平均数差数的方差等于总体方差除以各自样本容量之和（或两样本平均数方差之和）</p>
-</blockquote>
-<p>设从一正态总体N（μ，$σ^2$)中随机抽取样本容量为$n_1$和$n_2$的两个独立样本，其样本方差为$s_1^2$和$s_2^2$，则定义$s_1^2$和$s_2^2$的比值为F：</p>
-<p>$$<br>F=<br>\frac{s{_1}{^2}}{s{_2}{^2}}<br>$$<br>•在已知<strong>总体方差时，u检验可以用于比较总体平均数。</strong></p>
-<p>•在已知<strong>样本方差时，t检验可以用于比较总体平均数。</strong></p>
-<p><strong>若两个总体的标准差已知</strong></p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732670.png" alt="image-20220325203852495" style="zoom:50%;">
-
-<p>•当σ<strong>1与σ2相等时，F可以简化为两个样本方差的比值。</strong></p>
-<p>•F<strong>检验可以用于比较总体的方差。</strong></p>
-<p>•F<strong>分布的取值范围是0到正无穷；</strong></p>
-<p>•F<strong>分布的平均数趋向1；</strong></p>
-<p>•曲线不对称<strong>，峰值偏左(特别在df1=1或2时，曲线以y轴为渐近线)。</strong></p>
-<p>•曲线性状仅取决于<strong>df1和df2。</strong></p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732547.png" alt="image-20220325203939618" style="zoom:50%;">
-
-
-
-<h2 id="第四章统计推断（已知样本推总体"><a href="#第四章统计推断（已知样本推总体" class="headerlink" title="第四章统计推断（已知样本推总体)"></a>第四章统计推断（已知样本推总体)</h2><blockquote>
-<p>上一章我们讨论了已知总体的时候样本的特征，即<strong>抽样分布。</strong></p>
-</blockquote>
-<blockquote>
-<p>本章我们来讨论已知样本的时候如何<strong>推断总体的特征，主要任务是分析差异产生的原因，是随机误差导致的，还是一些处理效应导致的。</strong></p>
-</blockquote>
-<h3 id="假设检验的原理与方法"><a href="#假设检验的原理与方法" class="headerlink" title="假设检验的原理与方法"></a>假设检验的原理与方法</h3><p>假设检验(hypothesis test)：也叫显著性检验(significance test)，是根据总体的理论分布和小概率原理，对==未知或不完全知道的总体==提出==两种==彼此对立的假设，然后由样本的实际结果，经过一定的计算，做出在一定概率意义上应该接受哪种假设的推断。</p>
-<p>假设检验的步骤</p>
-<p><strong>1.</strong> <strong>提出假设</strong></p>
-<p>零假设(null hypothesis)也称无效假设，是指处理效应没有产生真实的差异，即差异都是随机误差导致的。</p>
-<p>备择假设(alternative hypothesis)，是指处理效应产生了真实的差异。</p>
-<p><strong>2.</strong> <strong>确定显著水平</strong></p>
-<p>显著水平(significance level)是人为规定的小概率界限，用α表示，常用取值是0.05或0.01，特殊情况时也可以取其他值。</p>
-<p>α也是假阳性发生的概率，及<strong>I</strong>型错误的发生率</p>
-<p><strong>3.</strong> <strong>计算统计数与相应的概率</strong></p>
-<p>在假定零假设正确的前提下，选择恰当的<strong>抽样分布相关公式</strong>计算标准化后的统计数，然后<strong>查表</strong>找到对应的概率累积函数值。</p>
-<p><strong>4.</strong> <strong>推断是否接受假设</strong></p>
-<p>推断的基础是小概率原理，即认为小概率事件在一次抽样试验中几乎是不可能发生的</p>
-<p><strong>双尾检验和单尾检验</strong></p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131732671.png" alt="image-20220325204101665" style="zoom:67%;">
-
+<p>==回归分析==(regression analysis)：回归分析经常用于研究两个变量的因果关系，建立回归方程用于根据<strong>自变量</strong>==预测==和==控制==<strong>因变量</strong>。</p>
+<p>表示<strong>原因</strong>的变量称为自变量(independent variable)，常用x表示，一般是试验中预先确定的，<strong>没有随机误差</strong>。</p>
+<p>表示<strong>结果</strong>的变量称为因变量(dependent variable)，常用y表示，y随x的变化而变化，且<strong>具有随机误差</strong>。</p>
 <table>
 <thead>
 <tr>
-<th>零假设</th>
-<th>备择假设</th>
+<th>回归分析的分类</th>
 <th></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>差值等于0</td>
-<td>差值不等于0</td>
-<td>u**&lt;-$\frac{u{_α}}{2}$和u&gt;$\frac{u{_α}}{2}$两个区域，所以叫双尾检验**</td>
+<td>根据自变量，因变量的数目</td>
+<td>一个自变量与一个因变量：一元回归分析</td>
 </tr>
 <tr>
 <td></td>
-<td>差值大于0</td>
-<td>u**&gt;$u_α$区域**,单尾检验</td>
+<td>多个自变量与一个因变量：多元回归分析</td>
+</tr>
+<tr>
+<td>根据变量间关系的类型</td>
+<td>直线回归(linear regression)</td>
 </tr>
 <tr>
 <td></td>
-<td>差值小于0</td>
-<td>u**&lt;-$u_α$区域**，单尾检验</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>==单尾检验灵敏度高==，一般用单尾</td>
+<td>曲线回归(curve regression)</td>
 </tr>
 </tbody></table>
-<p>假设检验的两类错误</p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733780.png" alt="image-20220325204122095"></p>
-<p>I型错误，也常称为α错误，弃真错误或==假阳性==错误。发生概率<strong>α</strong></p>
-<p>II型错误，也常称为β错误，取伪错误或==假阴性==错误。概率与<strong>两个总体的分布情况</strong>有关，也与显著水平<strong>α</strong>有关</p>
-<p>如何减少II型错误：</p>
-<p>（1）α越大，β越小（不可取）</p>
-<p>（2）两个μ的差值越大，β越小（比如采用更有效的药物）</p>
-<p>（3）备择曲线的σ值越小，β越小(样本越集中)</p>
-<p>（4）为了少犯β错误，<strong>增加样本容量</strong>是最有效的办法</p>
-<h3 id="样本方差的同质性检验"><a href="#样本方差的同质性检验" class="headerlink" title="样本方差的同质性检验"></a>样本方差的同质性检验</h3><p>方差的同质性(又称方差齐性，homogeneity of variance)，就是指各个总体的方差是相同的</p>
-<p>•方差同质性检验就是要从<strong>各样本的方差</strong>来判断其总体方差是否相同。</p>
+<hr>
+<p>相关分析(correlation analysis)：相关分析通常用于研究两个变量的平行关系。变量x和y无自变量和因变量之分，且<strong>都具有随机误差</strong>。</p>
 <table>
 <thead>
 <tr>
-<th>比较一个样本所属总体的方差与参考总体的方差有无显著差异</th>
-<th>比较两个样本所属总体的方差与参考总体的方差有无显著差异</th>
+<th>相关分析的分类</th>
+<th></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>卡方检验</td>
-<td>F检验</td>
+<td>对两个变量之间的直线关系进行相关分析</td>
+<td>直线相关(linear correlation)分析或简单相关(simple correlation)分析</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>一个变量与多个变量的线性相关</td>
+<td>复(multiple)相关分析</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>保持其余变量不变的情况下研究两个变量的线性相关</td>
+<td>偏(partitial)相关分析</td>
 </tr>
 </tbody></table>
-<p>一、比较一个样本所属总体的方差与参考总体的方差有无显著差异，使用<strong>卡方检验</strong></p>
-<p><strong>例题</strong>•已知正常农田铅浓度的方差0.065(μg/g)2，某农田经抽样8份，测定其铅浓度的方差0.15(μg/g)2，问该农田铅浓度的方差与正常农田是否相同。</p>
-<p>•(1)零假设两者铅浓度的方差无差别，即某农田的铅浓度的方差正常。</p>
-<p>•(2)显著性水平α取0.05</p>
-<p>•**(3)计算**<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733080.png" alt="image-20220324152216664"></p>
-<p>• df=n-1=7时，卡方检验右尾检验的拒绝区是卡方大于14.07，16.154落在拒绝区内。</p>
-<p>•(4) 结论：拒绝零假设，认为两者铅浓度的方差有显著差别，且该农田铅浓度的方差高于正常值。</p>
-<p>二、 比较两个样本所属总体的方差与参考总体的方差有无显著差异，使用<strong>F检验</strong></p>
-<p><strong>例题</strong>•小麦品种甲抽样10次，其千粒重的方差是22.933，小麦品种乙抽样10次，其千粒重的方差是2.933，问两个品种的千粒重的方差是否相同。</p>
-<p>•(1)零假设两者千粒重的方差无差别。</p>
-<p>•(2)显著性水平α取0.05。</p>
-<p>•(3)计算<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733414.png" alt="image-20220324152801760"></p>
-<p>• df1=n-1=9，df2=n-1=9时，F检验右尾检验的拒绝区是F&gt;3.18，7.819落在拒绝区内。</p>
-<p>•(4) 结论：拒绝零假设，认为两者千粒重的方差有显著差别，且品种甲的方差高于品种乙。</p>
-<h3 id="样本平均数的假设检验"><a href="#样本平均数的假设检验" class="headerlink" title="样本平均数的假设检验"></a>样本平均数的假设检验</h3><table>
-<thead>
-<tr>
-<th>一个样本平均数的假设检验总结</th>
-<th>两个样本平均数的假设检验总结</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>比较样本所属总体和参考总体的平均数，且参考总体的<strong>方差已知</strong>，用u检验</td>
-<td>比较两个样本所属总体的平均数，且两个总体的<strong>方差已知</strong>，用u检验</td>
-</tr>
-<tr>
-<td>比较样本所属总体和参考总体的平均数，且参考总体的<strong>方差未知</strong>，用t检验，但在样本容量较大(≥30)时，t检验和u检验几乎没有区别</td>
-<td>比较两个样本所属总体的平均数，且两个总体的<strong>方差未知</strong>，但在两个样本容量都较大(<strong>≥30</strong>)时，可以用u检验简化计算</td>
-</tr>
-<tr>
-<td></td>
-<td>比较两个样本所属总体的平均数，且两个总体的方差未知，样本容量较小时应使用t检验，可以分成三种情况：==方差相等，样本容量相等或两者均不相等==</td>
-</tr>
-<tr>
-<td></td>
-<td>对于成对数据，其实可以转化成一个样本平均数的假设检验，服从df=n-1的t分布，当n足够大时，可以简化为u检验。</td>
-</tr>
-</tbody></table>
-<h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><p>参数估计是指由样本结果对总体参数在一定概率水平下所做出的估计。</p>
-<p>其实，参数估计就是统计推断相反的运算过程；</p>
-<p>统计推断是已知μ，求u或t的值；</p>
-<p>参数估计就是已知u或t，求μ的值。</p>
-<p><strong>例题</strong>•测得某批25个小麦样本的平均蛋白质含量为14.5%。</p>
-<p>•(1)正常小麦的蛋白质含量为14%，标准差为2.50%，请问该样本是否正常？</p>
-<p>•(2)求该批蛋白质含量的95%置信区间。</p>
-<p>•(1) 零假设该样本蛋白质含量等于14%，备择假设该样本蛋白质含量不等于14%。</p>
-<p>•显著性水平α取0.05</p>
-<p>•标准化计算</p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733493.png" alt="image-20220325204226729" style="zoom:50%;">
-
-<p>接受零假设，该样本与正常小麦样本无差别</p>
-<p>•(2) 求95%置信区间，即</p>
-<p>•<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733652.png" alt="image-20220324161141867" style="zoom:50%;"></p>
-<p>•经计算可得μ=13.52或15.48。</p>
-<p>•即该批蛋白含量的95%置信区间为13.52%~15.48%(区间估计)，也可以写成14.5±0.98(点估计)。</p>
-<p>•显然这个区间包括了14%，从另一个角度验证了上一小题的结论是正确的。</p>
-<h2 id="第五章卡方检验"><a href="#第五章卡方检验" class="headerlink" title="第五章卡方检验"></a>第五章卡方检验</h2><blockquote>
-<p>不是所有的样本都可以计算平均数和方差的；</p>
-<p>例如属性资料的样本，和一些计数资料的样本</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>属性资料</th>
-<th>计数资料</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>用1. 统计次数法；2. 评分法</td>
-<td>服从二项分布，则可以利用二项分布的公式来研究其概率分布，有时可近似成正态分布</td>
-</tr>
-<tr>
-<td>将其转化为计数资料</td>
-<td>无论是否服从二项分布，都可以使用<strong>χ2检验</strong>来研究其概率分布</td>
-</tr>
-</tbody></table>
-<p>χ2检验(chi-square test)</p>
-<p>①一个样本的方差同质性检验；</p>
-<p>②适合性检验；只有右尾检验</p>
-<p>③独立性检验；只有右尾检验</p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733964.png" alt="image-20220324162959712"></p>
-<p>•对于计数资料或属性资料，其观测值Oi与理论值Ei通过以上公式计算后，应该趋向于服从自由度df=k-1的χ2分布。</p>
-<p>•如果观测值Oi偏离理论值Ei，χ2增大，与χ2分布只有右侧拖着长尾吻合；</p>
-<h3 id="χ2检验的步骤"><a href="#χ2检验的步骤" class="headerlink" title="χ2检验的步骤"></a>χ2检验的步骤</h3><p>•1. 提出零假设：观测值等于理论值，或者说两者的差异是由抽样误差引起的；备择假设：观测值不等于理论值，即两者的差异是真实存在的。</p>
-<p>•2. 确定显著水平α，一般取0.05或0.01。</p>
-<p>•3. 根据公式计算χ2。</p>
-<p>•4. 进行统计推断。从附表4查出χ2α的值，如果χ2大于χ2α，则拒绝零假设；否则接受零假设。</p>
-<p>PS:</p>
+<hr>
+<h2 id="直线回归"><a href="#直线回归" class="headerlink" title="直线回归"></a>直线回归</h2><p>直线回归的数学模型</p>
+<p>虽然x固定时，y并没有确定的值，但是此时y的分布是固定的，或者说<strong>其平均数等指标是固定的</strong>。<br>$$<br>\mu_Y=\alpha+\beta X<br>$$<br>$\alpha$为直线在y轴的截距(intercept)</p>
+<p>$\beta$为直线的斜率(slope)<br>$$<br>Y=\alpha+\beta X+\epsilon<br>$$<br>若使用样本资料估计参数<br>$$<br>y=a+bx+e<br>$$</p>
+<p>==直线回归方程的参数估计==<br>$$<br>b=\frac{\sum (x-\overline x)-(y-\overline y)}<br>{\sum(x-\overline x)^2}<br>=\frac{SP}{SS_x}<br>$$</p>
+<p>b的分子简称为两个离均差的乘积和，记作SP或$SS_{xy}$</p>
+<p>b的分母称为离均差平方和，记作$SS_x$</p>
+<p>$\alpha=\overline y-b\overline x$</p>
+<hr>
+<p>回归方程的三个基本性质</p>
+<p>(1)$Q=\sum(y-\hat y)^2$最小</p>
+<p>(2)$\sum(y-\hat y)=\sum(y-a-bx)=0$</p>
+<p>(3)$\hat y=\overline y-b\overline x+bx=\overline y+b(x-\overline x)$即直线通过中心点$(\overline x,\overline y)$</p>
+<p>注意：直线回归方程的适用范围不能超过计算时用到的x的范围；不是所有的散点都落在回归直线上，但是很接近回归直线。</p>
+<hr>
+<h3 id="直线回归的假设检验"><a href="#直线回归的假设检验" class="headerlink" title="直线回归的假设检验"></a>直线回归的假设检验</h3><p>直线回归必须检验，<strong>F检验和t检验</strong>都可以用于直线回归的假设检验</p>
+<p>•根据方差分解的思想，我们也可以把y的总方差分解成，x引起的y的方差(称==回归方差==)和随机方差(称==离回归方差==)两部分。</p>
+<p>如果回归方差显著大于离回归方差，那么说明x对y的影响大于随机误差，即y对x的回归关系是显著的，否则则说明回归关系不是显著的。</p>
+<p>直线回归的平方和分解<br>$$<br>\sum(y-\overline y)^2=\sum(\hat y-\overline y)^2+\sum(y-\hat y)^2\<br>左边y的离均差平方和，也称为总平方和SS_y\<br>第一项称回归平方和，记作U或SS_{回归}\<br>第二项称为离回归平方和，也称残差平方和（剩余平方和），记作Q,SS <em>{离回归}或SS</em>{剩余}<br>$$</p>
+<p>$$<br>U=\sum(\hat y-\overline y)^2\<br>=b^2\sum(x-\overline x)^2=b^2SS_x=\frac{SP^2}{SS_x}\<br>Q=SS_y-U<br>$$</p>
+<h3 id="直线回归的自由度分解"><a href="#直线回归的自由度分解" class="headerlink" title="直线回归的自由度分解"></a>直线回归的自由度分解</h3><p>总自由度为n-1</p>
+<p>一元直线回归，只涉及到一个自变量，所以回归平方和的自由度为1</p>
+<p>离回归平方和的自由度等于以上两者之差n-2</p>
+<hr>
+<h3 id="直线回归的F检验"><a href="#直线回归的F检验" class="headerlink" title="直线回归的F检验"></a>直线回归的F检验</h3><p>因为方差等于平方和除以自由度：<br>$$<br>S^2_{回归}=\frac{U}{1}\<br>S^2_{离回归}=\frac{Q}{n-2}\<br>F=\frac{S^2_{回归}}{S^2_{离回归}}\<br>若F值落在F分布的右尾拒绝区，则说明直线回归关系显著<br>$$</p>
+<hr>
+<h3 id="直线回归的t检验"><a href="#直线回归的t检验" class="headerlink" title="直线回归的t检验"></a>直线回归的t检验</h3><p>$Y=\alpha+\beta X+\epsilon$</p>
+<p>$\beta$等于零，那么y与x就没有关系</p>
+<p>b的平均数是$\beta$<br>$$<br>S_b=\frac{S_{离回归}}{\sqrt{SS_x}}\<br>t=\frac{b-\beta}{S_b}=\frac{b}{S_b}<br>(假设\beta=0)<br>$$<br>若t落在$df=n-2$的t分布的双尾拒绝区内说明$\beta$与0的差异显著，即直线回归关系显著。</p>
+<p>F检验和t检验的本质完全相同。</p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743839.png" alt="image-20220406105547440"></p>
+<p>1.回归直线位于$\mu_{y/x}$的置信区间的中间。</p>
+<p>2.$\mu_{y/x}$的置信区间位于y置信区间的中间。</p>
+<p>3.随着x远离平均数时，置信区间越宽，即回归直线描述数据关系的适合度变差</p>
+<h3 id="直线回归的应用注意"><a href="#直线回归的应用注意" class="headerlink" title="直线回归的应用注意"></a>直线回归的应用注意</h3><p>•1. 描述两个变量的依存关系。</p>
+<p>•2. 在一定范围内，根据自变量对因变量进行预测。</p>
+<p>•3. 通过控制自变量来控制因变量。</p>
+<p>PS：要符合生物学意义，区分自变量和因变量，==必须检验==，外推要谨慎。</p>
+<h2 id="直线相关"><a href="#直线相关" class="headerlink" title="直线相关"></a>直线相关</h2><p>•如果不需要区分自变量和因变量，只想了解两个变量的相关程度(degree of correlation)和相关性质(character of correlation)，则可以是使用==相关系数==(correlation coefficient)来描述。</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131743649.png" alt="image-20220406110202264"></p>
+<p>相关系数</p>
+<p>若使用样本资料时<br>$$<br>r=\frac{\sum(x-\overline x)(y-\overline y)}<br>{\sqrt{\sum(x-\overline x)^2\sum(y-\overline y)^2}}<br>=\frac{SP}{\sqrt{SS_xSS_y}}<br>=\sqrt{\frac{U}{SS_y}}<br>$$<br>计算相关系数时，<strong>两个变量是平等的</strong>，不区分自变量和因变量，这是相关和回归的主要区别。</p>
+<p>相关系数的是指就是回归平方和与总平方和比率的平方根，所以==取值范围为[-1,1]==。</p>
+<p>决定系数<br>$$<br>r^2=\frac{SP^2}{SS_xSS_y}<br>=\frac{U}{SS_y}<br>$$<br>决定系数的含义是<strong>回归平方和占总平方和的比率</strong>，取值范围[0,1]。</p>
+<h3 id="直线相关的相关系数假设检验"><a href="#直线相关的相关系数假设检验" class="headerlink" title="直线相关的相关系数假设检验"></a>直线相关的相关系数假设检验</h3><p>计算出相关系数以后，并不能说明两者真的相关，还<strong>必须使用假设检验来推断</strong>，根据样本资料计算的r的理论值ρ与0的差异是否显著。<br>$$<br>S_r=\sqrt{\frac{1-r^2}{n-2}}\<br>t=\frac{r-\rho}{S_r}<br>=\frac{r}{S_r}<br>$$<br>如果t值落在$df=n-2$的t分布的拒绝区，才说明相关是显著的。</p>
+<p>•相关显著性检验的$t_r$与回归显著性检验的$t_b$是相等的，所以两个变量的<strong>回归系数和相关系数的t检验本质是完全相同的</strong>。</p>
+<p>r临界值表，查询附表8，可以发现<strong>随着df的增大，r的临界值变小</strong>，也就是说为了发现弱相关性，必须<strong>样本足够大</strong>才行。</p>
+<h3 id="直线相关的应用注意"><a href="#直线相关的应用注意" class="headerlink" title="直线相关的应用注意"></a>直线相关的应用注意</h3><p>•1. 两个变量应该都服从<strong>正态分布</strong>。</p>
+<p>•2. 相关系数<strong>必须进行检验</strong>。</p>
+<p>•3. 变量应尽可能多。</p>
+<p>•4. 相关系数显著说明两个变量之间存在相关性，到底是因果关系还是平行关系要根据生物学知识进行判断。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>==直线回归和直线相关有什么区别？==</p>
 <ol>
-<li><p>理论值非常小时，上式计算的χ2将偏离χ2分布，所以在==Ei≤5时，需要进行并组==；</p>
+<li><p>直线回归需要区别自变量和因变量，自变量一般是代表原因的量，或者是可以严格控制的量，因变量应服从正态分布；直线相关则要求两者都服从正态分布，两者的地位是完全相同的。</p>
 </li>
-<li><p>在==自由度df=1时==，需要进行连续性矫正；当df＞1时，是否进行连续性矫正差别不大。</p>
-<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733392.png" alt="image-20220325204402044" style="zoom:67%;"></li>
+<li><p><strong>直线回归一般用于研究因果关系，而直线相关一般用于研究平行关系</strong>。</p>
+</li>
+<li><p>回归系数b取值范围是负无穷到正无穷，而相关系数r的取值范围是[-1,1]。</p>
+</li>
+<li><p>b越大，说明直线的斜率越大；|r|越大，说明散点距离直线越近，或者说直线方程的拟合程度越好。</p>
+</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>适合性检验<strong>compatibility test</strong></th>
-<th>独立性检验</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>比较观测值与理论值是否符合的假设检验，也叫拟合优度检验(goodness of fit test)</td>
-<td>独立性检验是研究两个或两个以上因子彼此之间是相互独立的还是相互影响的一类统计方法，也理解成两个样本之间的适合性检验。</td>
-</tr>
-<tr>
-<td><strong>二项分布</strong>的适合性检验根据二项分布公式计算理论频数 注意理论值≤5时应该并组。<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733528.png" alt="image-20220325204446335" style="zoom:25%;">==通过样本估计了一个参数，需要df-1==</td>
-<td>自由度df=(r-1)(c-1)</td>
-</tr>
-<tr>
-<td><strong>正态分布</strong>的适合性检验先根据频数分布表，计算样本的平均数和方差<img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131733074.png" alt="image-20220325204518286" style="zoom:25%;">==通过样本估计了两个参数，df-2==</td>
-<td></td>
-</tr>
-</tbody></table>
+<p>==•直线回归和直线相关有什么联系？==</p>
+<p>•1. r和b的正负号一定是相同的。</p>
+<p>•2. 假设检验是等价的。</p>
+<p>•3. 直线回归的F检验过程中要计算总平方和和回归平方和，而$r^2$则是回归平方和与总平方和的比值。</p>
+<p>•4. 若x和y均为正态分布时，也可以分别计算以x为自变量的回归系数，和以y为自变量的回归系数，且$r^2=b_{x/y}b_{y/x}$。</p>
 
                 
             </div>
@@ -933,7 +667,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cling5899.github.io/2022/04/07/biostatistics-chapter1-5/">https://cling5899.github.io/2022/04/07/biostatistics-chapter1-5/</a>
+                    <a href="https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/">https://cling5899.github.io/2022/04/09/linear-regression-and-correlation-analysis/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1028,6 +762,59 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2022/05/07/drep-notes/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="drep：基因组的快速比较和去复制">
+                        
+                        <span class="card-title">drep：基因组的快速比较和去复制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文为个人在学习drep软件时的学习笔记，有什么错误或指教请联系我。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%AD%A6/" class="post-category">
+                                    宏基因组学
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/">
+                        <span class="chip bg-color">生信软件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2022/04/08/biostatistics-chapter6/">
                     <div class="card-image">
                         
@@ -1044,9 +831,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1068,59 +855,6 @@
                     
                     <a href="/tags/%E7%94%9F%E7%89%A9%E7%BB%9F%E8%AE%A1%E5%AD%A6/">
                         <span class="chip bg-color">生物统计学</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/03/05/bioinformatics-class-note1/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="生物信息学课程学习笔记（一）">
-                        
-                        <span class="card-title">生物信息学课程学习笔记（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            这是我上课过程中随手记的生物信息学笔记，如有错误或指教请联系我修改。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    课程笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
-                        <span class="chip bg-color">生物信息学</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
