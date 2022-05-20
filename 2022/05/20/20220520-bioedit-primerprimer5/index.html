@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="drep：基因组的快速比较和去复制, Cling&#39;s Blog">
-    <meta name="description" content="本文为个人在学习drep软件时的学习笔记，有什么错误或指教请联系我。">
+    <meta name="keywords" content="bioedit&amp;PrimerPrimer5的使用, Cling&#39;s Blog">
+    <meta name="description" content="生物信息学作业-520-bioedit&amp;amp;PrimerPrimer5问答题：（1）分析所给核酸序列（基因）的组分，主要包括分子质量、碱基组成和碱基分布等；（2）给出相应的转换，例如DNA 转换成RNA，翻译成蛋白质序列；（3）分析基因">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>drep：基因组的快速比较和去复制 | Cling&#39;s Blog</title>
+    <title>bioedit&amp;PrimerPrimer5的使用 | Cling&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">drep：基因组的快速比较和去复制</h1>
+                    <h1 class="description center-align post-title">bioedit&amp;PrimerPrimer5的使用</h1>
                 </div>
             </div>
         </div>
@@ -432,16 +432,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/">
-                                <span class="chip bg-color">生信软件</span>
+                            <a href="/tags/bioedit/">
+                                <span class="chip bg-color">bioedit</span>
                             </a>
                         
-                            <a href="/tags/dRep/">
-                                <span class="chip bg-color">dRep</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8E%BB%E5%86%97%E4%BD%99/">
-                                <span class="chip bg-color">去冗余</span>
+                            <a href="/tags/PrimerPrimer5/">
+                                <span class="chip bg-color">PrimerPrimer5</span>
                             </a>
                         
                     </div>
@@ -452,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
-                                宏基因组
+                            <a href="/categories/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/" class="post-category">
+                                生信软件
                             </a>
                         
                     </div>
@@ -465,28 +461,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-07
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-13
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    427
+                    388
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -509,88 +505,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="MrOlm-x2F-drep-Rapid-comparison-and-dereplication-of-genomes"><a href="#MrOlm-x2F-drep-Rapid-comparison-and-dereplication-of-genomes" class="headerlink" title="MrOlm/drep: Rapid comparison and dereplication of genomes"></a><a target="_blank" rel="noopener" href="https://github.com/MrOlm/drep">MrOlm/drep: Rapid comparison and dereplication of genomes</a></h2><p>推荐用conda安装</p>
-<pre class="line-numbers language-none"><code class="language-none">conda create -n drep
-conda activate drep
-conda install drep -c bioconda<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>也可以用pip，但是有一些依赖的包可能需要自己下</p>
-<pre class="line-numbers language-none"><code class="language-none">pip install drep<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908759.png" alt="image-20220506151828537"></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908166.png" alt="image-20220506151949260"></p>
-<p>安装版本V3.2.2</p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Go24oNyJFdPiXLTyCeLL1g">drep：微生物基因组快速去冗余-文章解读+帮助文档+实战教程</a></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908821.png" alt="image-20220506162420047"></p>
-<h1 id="1-dRep需要依赖一些软件"><a href="#1-dRep需要依赖一些软件" class="headerlink" title="1. dRep需要依赖一些软件"></a>1. dRep需要依赖一些软件</h1><pre class="line-numbers language-none"><code class="language-none">运行
-$ dRep check_dependencies<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-none"><code class="language-none">mash.................................... !!! ERROR !!!   (location = None)
-nucmer.................................. !!! ERROR !!!   (location = None)
-checkm.................................. all good        (location = 
-ANIcalculator........................... !!! ERROR !!!   (location = None)
-prodigal................................ all good        (location = /usr/bin/prodigal)
-centrifuge.............................. !!! ERROR !!!   (location = None)
-nsimscan................................ !!! ERROR !!!   (location = None)
-fastANI................................. !!! ERROR !!!   (location = None）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908955.png" alt="image-20220509154537123"></p>
-<p>这两个是必须的</p>
-<p>可以单独安装，也可以让conda安装</p>
-<pre class="line-numbers language-none"><code class="language-none">这两个应该都行
-conda install -c bioconda mash
-conda install -c bioconda/label/cf201901 mash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">conda install -c bioconda mummer
-conda install -c bioconda/label/cf201901 mummer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="mash的安装"><a href="#mash的安装" class="headerlink" title="mash的安装"></a>mash的安装</h3><p><a target="_blank" rel="noopener" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x">Mash: fast genome and metagenome distance estimation using MinHash | Genome Biology | Full Text</a><br><a target="_blank" rel="noopener" href="https://github.com/marbl/mash">marbl/Mash: Fast genome and metagenome distance estimation using MinHash</a><br><a target="_blank" rel="noopener" href="https://github.com/marbl/Mash/releases/tag/v2.3">Release Mash v2.3 · marbl/Mash</a></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908913.png" alt="image-20220507233706093"></p>
-<p>下载之后，安装就ok了</p>
-<h3 id="nucmer的安装"><a href="#nucmer的安装" class="headerlink" title="nucmer的安装"></a>nucmer的安装</h3><p><a target="_blank" rel="noopener" href="http://mummer.sourceforge.net/">The MUMmer Home Page</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/mummer4/mummer">mummer4/mummer: Mummer alignment tool</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/mummer4/mummer/blob/master/INSTALL.md">mummer/INSTALL.md at master · mummer4/mummer</a></p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908599.png" alt="image-20220507234520479"></p>
-<p>然后</p>
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908787.png" alt="image-20220509154629191"></p>
-<p>这些是可选的</p>
-<p>我下centrifuge的时候，发现我的版本可能高了，不适配了</p>
-<p>不用都下，用不到就先不下，报错了再下也不迟</p>
-<h1 id="2-实战"><a href="#2-实战" class="headerlink" title="2. 实战"></a>2. 实战</h1><h3 id="Try1"><a href="#Try1" class="headerlink" title="Try1"></a>Try1</h3><pre class="line-numbers language-none"><code class="language-none">##模拟数据来源刘永鑫
-(drep) chenl 16:32:14 ~/drep_try/fa
-$ ls
-B4018L.2.fa  K4093L.5.fa  K4096L.2.fa  L4105L.2.fa  W4194L.3.fa  W4194L.6.fa
-$ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908283.png" alt="image-20220509172353844"></p>
-<p>checkm的时间比较久，然后啪叽就成功了</p>
-<p>Succeed:happy:</p>
-<h3 id="Try2"><a href="#Try2" class="headerlink" title="Try2"></a>Try2</h3><pre class="line-numbers language-none"><code class="language-none">dRep dereplicate ./ -g bin/*.fa -sa 0.95 -nc 0.30 -p 24 -comp 50 -con 10<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-none"><code class="language-none"> -sa S_ANI, --S_ani S_ANI
-                       二级聚类为99% ANI threshold to form secondary clusters (default:
-                       0.99)
- -nc COV_THRESH, --cov_thresh COV_THRESH
-                       最小的重叠是10% Minmum level of overlap between genomes when doing
-                       secondary comparisons (default: 0.1)
-- p 线程
-- comp 完整度
-- 污染度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908193.png" alt="image-20220509231153634"></p>
-<h3 id="Try3"><a href="#Try3" class="headerlink" title="Try3"></a>Try3</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908755.png" alt="image-20220509231307632"></p>
-<h1 id="3-结果"><a href="#3-结果" class="headerlink" title="3. 结果"></a>3. 结果</h1><h2 id="Cluster-scoring"><a href="#Cluster-scoring" class="headerlink" title="Cluster_scoring"></a>Cluster_scoring</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908631.png" alt="image-20220510102806936"></p>
-<h2 id="Clustering-scatterplots"><a href="#Clustering-scatterplots" class="headerlink" title="Clustering_scatterplots"></a>Clustering_scatterplots</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908568.png" alt="image-20220510102904210"></p>
-<h2 id="Primary-clustering-dendrogram"><a href="#Primary-clustering-dendrogram" class="headerlink" title="Primary_clustering_dendrogram"></a>Primary_clustering_dendrogram</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908246.png" alt="image-20220510102940514"></p>
-<h2 id="Secondary-clustering-dendrograms"><a href="#Secondary-clustering-dendrograms" class="headerlink" title="Secondary_clustering_dendrograms"></a>Secondary_clustering_dendrograms</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131908510.png" alt="image-20220510103012175"></p>
-<h2 id="Secondary-clustering-MDS"><a href="#Secondary-clustering-MDS" class="headerlink" title="Secondary_clustering_MDS"></a>Secondary_clustering_MDS</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131907590.png" alt="image-20220510103100252"></p>
-<h2 id="Winning-genomes"><a href="#Winning-genomes" class="headerlink" title="Winning_genomes"></a>Winning_genomes</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205131907299.png" alt="image-20220510103131052"></p>
+                <h1 id="生物信息学作业-520-bioedit-amp-PrimerPrimer5"><a href="#生物信息学作业-520-bioedit-amp-PrimerPrimer5" class="headerlink" title="生物信息学作业-520-bioedit&amp;PrimerPrimer5"></a>生物信息学作业-520-bioedit&amp;PrimerPrimer5</h1><p>问答题：（1）分析所给核酸序列（基因）的组分，主要包括分子质量、碱基组成和碱基分布<br>等；（2）给出相应的转换，例如DNA 转换成RNA，翻译成蛋白质序列；（3）分析基因所包<br>含的限制性内切酶位点；（4）如何设计引物并将基因克隆到特定载体上（质粒，pET28a）？</p>
+<p>&gt;k127_305768_1<br>ATGAGCGCGAAGCCGCTGAACCACAGCTGGGACAACGCGGCCCGGGGCCGGCGCATCACCATCGCGCGCACGCCGCTCGTCGGCCGCTCGACGCGCATCTTCACCATCGGCAGCTGCTTCGCCATGGAAATCCGCCGCCAGCTGCAGTCGGGCGGCTACCGCTCGCTGCCGGATTTCAGCGAGGTGAAGATCGACCGCGCGCACCAGTTCGCCGGCGGCATCCCCGACAACGAGCGCTTCGTCTACTACGACACCTTCACCATCCGCCAGGAGTTCGACAAGGCCTTCGGCCTGTGGGACCAGGACGCGGACTCCTACTGGAGCATGACCGACCGGCCGATCAACCGGAACAACAAGTGGCCGGTGGTGTACCAGGACCCGCACCGCAAGCTCTGCTTCGCCGACAGCCACGCGGGCAGCCGTCTCGGTCCGGGCGCCGCGCAGCTCGTCGAAGCGGGCGATGCCGAGGTCGATGAGCACCGCGTCTCCCGACGGGGCCACGATGATGTTGCGCGGTGA</p>
+<h2 id="一、bioedit的下载"><a href="#一、bioedit的下载" class="headerlink" title="一、bioedit的下载"></a>一、bioedit的下载</h2><p><a target="_blank" rel="noopener" href="https://bioedit.software.informer.com/">BioEdit Download - Research software utility for creating and editing biological sequences</a></p>
+<h2 id="二、序列的导入与分析"><a href="#二、序列的导入与分析" class="headerlink" title="二、序列的导入与分析"></a>二、序列的导入与分析</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201100422.png" alt="image-20220520110030411"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201101670.png" alt="image-20220520110100720"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201103362.png" alt="image-20220520110341014"></p>
+<p><img src="C:/Users/Cling/AppData/Roaming/Typora/typora-user-images/image-20220520110238200.png" alt="image-20220520110141950"></p>
+<h3 id="（1）分子质量、碱基组成和碱基分布"><a href="#（1）分子质量、碱基组成和碱基分布" class="headerlink" title="（1）分子质量、碱基组成和碱基分布"></a>（1）分子质量、碱基组成和碱基分布</h3><p>DNA molecule: k127_305768_1<br>Length = 519 base pairs<br>Molecular Weight = 159274.00 Daltons, single stranded<br>Molecular Weight = 317143.00 Daltons, double stranded<br>G+C content = 68.21%<br>A+T content = 31.79%</p>
+<p>Nucleotide  Number   Mol%<br>    A        93      17.92<br>    C        188     36.22<br>    G        166     31.98<br>    T        72      13.87</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201105074.png" alt="image-20220520110552251"></p>
+<h3 id="（2）给出相应的转换，例如DNA-转换成RNA，翻译成蛋白质序列"><a href="#（2）给出相应的转换，例如DNA-转换成RNA，翻译成蛋白质序列" class="headerlink" title="（2）给出相应的转换，例如DNA 转换成RNA，翻译成蛋白质序列"></a>（2）给出相应的转换，例如DNA 转换成RNA，翻译成蛋白质序列</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201107003.png" alt="image-20220520110715059"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201107805.png" alt="image-20220520110736817">现在是RNA，然后再切换回DNA再做下一题。</p>
+<p>切换就用RNA-&gt;DNA </p>
+<p>而翻译成蛋白质则使用</p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201110013.png" alt="image-20220520111042018"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201111178.png" alt="image-20220520111131926"></p>
+<h2 id="三、Primer-Premierv5-00的下载"><a href="#三、Primer-Premierv5-00的下载" class="headerlink" title="三、Primer Premierv5.00的下载"></a>三、Primer Premierv5.00的下载</h2><p><a target="_blank" rel="noopener" href="http://www.xue51.com/soft/52144.html">Premier破解版-Primer Premier 5破解版下载(附破解教程+使用教程) v5.00 - 软件学堂</a></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201117123.png" alt="image-20220520111735131"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201118632.png" alt="image-20220520111854813"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201118090.png" alt="image-20220520111811980"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201118735.png" alt="image-20220520111842561"></p>
+<h2 id="四、序列的导入与分析"><a href="#四、序列的导入与分析" class="headerlink" title="四、序列的导入与分析"></a>四、序列的导入与分析</h2><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201120223.png" alt="image-20220520112002751"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201120743.png" alt="image-20220520112051677"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201121915.png" alt="image-20220520112113956"></p>
+<h3 id="（3）分析基因所包含的限制性内切酶位点"><a href="#（3）分析基因所包含的限制性内切酶位点" class="headerlink" title="（3）分析基因所包含的限制性内切酶位点"></a>（3）分析基因所包含的限制性内切酶位点</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201124430.png" alt="2022-05-20_112416"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201127755.png" alt="image-20220520112710240"></p>
+<h3 id="（4）如何设计引物并将基因克隆到特定载体上（质粒，pET28a）"><a href="#（4）如何设计引物并将基因克隆到特定载体上（质粒，pET28a）" class="headerlink" title="（4）如何设计引物并将基因克隆到特定载体上（质粒，pET28a）"></a>（4）如何设计引物并将基因克隆到特定载体上（质粒，pET28a）</h3><p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201134599.png" alt="image-20220520113456556"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201135934.png" alt="image-20220520113512954"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201135895.png" alt="image-20220520113545149"></p>
+<p><img src="https://raw.githubusercontent.com/Cling5899/Personal_Typora_img/master/img/202205201136463.png" alt="image-20220520113602423"></p>
+<p>设计好参数后，找到44对引物，挑选合适的引物进行基因工程的那一套操作流程，即合成引物，PCR扩增，合成目的基因，导入到特定载体中，验证。</p>
 
                 
             </div>
@@ -617,7 +562,7 @@ $ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cling5899.github.io/2022/05/07/01drep-notes/">https://cling5899.github.io/2022/05/07/01drep-notes/</a>
+                    <a href="https://cling5899.github.io/2022/05/20/20220520-bioedit-primerprimer5/">https://cling5899.github.io/2022/05/20/20220520-bioedit-primerprimer5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -655,16 +600,12 @@ $ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/">
-                                    <span class="chip bg-color">生信软件</span>
+                                <a href="/tags/bioedit/">
+                                    <span class="chip bg-color">bioedit</span>
                                 </a>
                             
-                                <a href="/tags/dRep/">
-                                    <span class="chip bg-color">dRep</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8E%BB%E5%86%97%E4%BD%99/">
-                                    <span class="chip bg-color">去冗余</span>
+                                <a href="/tags/PrimerPrimer5/">
+                                    <span class="chip bg-color">PrimerPrimer5</span>
                                 </a>
                             
                         </div>
@@ -712,9 +653,64 @@ $ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/05/20/20220520-bioedit-primerprimer5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="bioedit&amp;PrimerPrimer5的使用">
+                        
+                        <span class="card-title">bioedit&amp;PrimerPrimer5的使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6/" class="post-category">
+                                    生信软件
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/bioedit/">
+                        <span class="chip bg-color">bioedit</span>
+                    </a>
+                    
+                    <a href="/tags/PrimerPrimer5/">
+                        <span class="chip bg-color">PrimerPrimer5</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2022/05/15/20220515intersection-research-of-mathematics-computer-and-life-sciences-young-scholars-forum-special-cloud-forum/">
                     <div class="card-image">
@@ -732,9 +728,9 @@ $ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -844,55 +840,6 @@ $ dRep dereplicate out1 -g ./fa/*.fa<span aria-hidden="true" class="line-numbers
                     
                     <a href="/tags/CPB/">
                         <span class="chip bg-color">CPB</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/05/03/01checkm-options-ch-zn/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Checkm操作实战">
-                        
-                        <span class="card-title">Checkm操作实战</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            lineage-specific（世系特异性）【推荐方法】
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-03
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-category">
-                                    宏基因组
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/checkM/">
-                        <span class="chip bg-color">checkM</span>
                     </a>
                     
                 </div>
