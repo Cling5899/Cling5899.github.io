@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>xinehc/args_oap: ARGs-OAP: Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database | Cling</title>
+  <meta name="keywords" content=" to-read ">
+  <meta name="description" content="xinehc/args_oap: ARGs-OAP: Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database | Cling">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Why Blog对博客的理解喜欢写Blog的人，会经历三个阶段。  第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。   第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。   第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。  我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="https://cling5899.github.io/about/index.html">
+<meta property="og:site_name" content="Cling">
+<meta property="og:description" content="Why Blog对博客的理解喜欢写Blog的人，会经历三个阶段。  第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。   第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。   第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。  我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pub.idqqimg.com/wpa/images/group.png">
+<meta property="article:published_time" content="2025-03-06T06:21:57.000Z">
+<meta property="article:modified_time" content="2025-03-06T06:32:14.390Z">
+<meta property="article:author" content="Cling">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pub.idqqimg.com/wpa/images/group.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>Cling</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/Cling5899"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/cling5899"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:cling5899@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=1480623404&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(2)</small>
+            
+        </div>
+    </li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="2">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>to-read</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 "
+           href="/2025_03_17_2025-03-04T15_30_53+08_00-xinehc_args_oap_%20ARGs-OAP_%20Online%20Analysis%20Pipeline%20for%20Antibiotic%20Resistance%20Genes%20Detection%20from%20Metagenomic%20Data%20Using%20an%20Integrated%20Structured%20ARG%20Database/"
+           data-tag="to-read"
+           data-author="" >
+            <span class="post-title" title="xinehc/args_oap: ARGs-OAP: Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database">xinehc/args_oap: ARGs-OAP: Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database</span>
+            <span class="post-date" title="2025-03-17 16:47:35">2025/03/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2025_03_06_hello-world/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2025-03-06 12:53:28">2025/03/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-2025-03-04T15_30_53+08_00-xinehc_args_oap_ ARGs-OAP_ Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">xinehc/args_oap: ARGs-OAP: Online Analysis Pipeline for Antibiotic Resistance Genes Detection from Metagenomic Data Using an Integrated Structured ARG Database</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">to-read</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2025-03-04 15:30:59'>2025-03-17 16:47</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ARGs-OAP"><span class="toc-text">ARGs_OAP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-text">Example</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#De-contamination"><span class="toc-text">De-contamination:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-text">Notes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#optional-Single-Paired-end-files"><span class="toc-text">(optional) Single&#x2F;Paired end files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#optional-Customized-database-structures"><span class="toc-text">(optional) Customized database&#x2F;structures</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#optional-Stage-two-pipeline-on-Galaxy-system-and-download-results"><span class="toc-text">(optional) Stage two pipeline on Galaxy system and download results</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ARGs-OAP"><a href="#ARGs-OAP" class="headerlink" title="ARGs_OAP"></a>ARGs_OAP</h2><p>This repository was created by Xiaole Yin (<em>xiaole99</em>) and is currently maintained by Xi Chen (<em>xinhec</em>). The goal is to make args_oap faster, and easier to run.</p>
+<p>If you have any questions, please create an <a target="_blank" rel="noopener" href="https://github.com/xinehc/args_oap/issues/new/choose">issue</a>, or contact Xiaole Yin (<a target="_blank" rel="noopener" href="https://github.com/xinehc/args_oap/blob/main/yinlele99@gmail.com">yinlele99@gmail.com</a>).</p>
+<p>More about the SARG database: <a target="_blank" rel="noopener" href="https://smile.hku.hk/ARGs/Indexing">https://smile.hku.hk/ARGs/Indexing</a>, and the change logs: <a target="_blank" rel="noopener" href="https://github.com/xinehc/args_oap/blob/main/CHANGELOG.md">CHANGELOG.md</a>.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Conda (macOS&#x2F;Linux):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda -c conda-forge args_oap</span><br></pre></td></tr></table></figure>
+
+<p>We suggest to create a new conda environment (here use <code>-n args_oap</code> as an example) to avoid potential conflicts of dependencies:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n args_oap -c bioconda -c conda-forge args_oap</span><br><span class="line">conda activate args_oap</span><br></pre></td></tr></table></figure>
+
+<p>If your OS satisfies all the dependencies (<code>python&gt;=3.7</code>, <code>diamond&gt;=2.0.15</code>, <code>bwa&gt;=0.7.17</code>, <code>blast&gt;=2.12</code>, <code>samtools&gt;=1.15</code>), then build from source:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xinehc/args_oap.git</span><br><span class="line">cd args_oap</span><br><span class="line">python setup.py install  # use python3 if needed</span><br></pre></td></tr></table></figure>
+
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>Two example fasta files (100k paired-end reads, 100 bp each) can be found <a target="_blank" rel="noopener" href="https://dl.dropboxusercontent.com/s/pqgftlo24rfc2rd/example.tar.gz">here</a>. The zipped file can be downloaded manually or using <code>wget</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># conda install wget</span><br><span class="line">wget https://dl.dropboxusercontent.com/s/pqgftlo24rfc2rd/example.tar.gz</span><br><span class="line">tar -xvf example.tar.gz</span><br><span class="line">cd example</span><br><span class="line"></span><br><span class="line"># conda activate args_oap</span><br><span class="line">args_oap stage_one -i input -o output -f fa -t 8</span><br><span class="line">args_oap stage_two -i output -t 8</span><br></pre></td></tr></table></figure>
+
+<p>After <code>stage_one</code>, a <code>metadata.txt</code> file can be found in <code>output</code>. It summarizes the estimated 16S and cell copy numbers in each sample, for example:</p>
+<table>
+<thead>
+<tr>
+<th>sample</th>
+<th>nRead</th>
+<th>n16S</th>
+<th>nCell</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>STAS</td>
+<td>200000</td>
+<td>8.229297879794053</td>
+<td>3.1472376316269055</td>
+</tr>
+<tr>
+<td>SWHAS104</td>
+<td>200000</td>
+<td>7.009547807125172</td>
+<td>3.487830355315917</td>
+</tr>
+</tbody></table>
+<p>After <code>stage_two</code>, the normalized ARGs copies per 16S&#x2F;cells or hits per million reads will be shown in several <code>*_normalized_*.txt</code> files. For example, <code>normalized_cell.type</code> means:</p>
+<ul>
+<li><code>normalized_cell</code> - normalized against cell number</li>
+<li><code>type</code> - type of ARGs (the hierarchy in the SARG database is type -&gt; subtype -&gt; gene)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>STAS</th>
+<th>SWHAS104</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>aminoglycoside</td>
+<td>0.04236519416057223</td>
+<td>0.1411521328969608</td>
+</tr>
+<tr>
+<td>bacitracin</td>
+<td>0.03724412673456899</td>
+<td>0.07331127852930945</td>
+</tr>
+<tr>
+<td>beta_lactam</td>
+<td>0.0</td>
+<td>0.14920548807040623</td>
+</tr>
+<tr>
+<td>macrolide-lincosamide-streptogramin</td>
+<td>0.0</td>
+<td>0.02404226144950743</td>
+</tr>
+<tr>
+<td>multidrug</td>
+<td>0.012948920209830746</td>
+<td>0.19382414709324317</td>
+</tr>
+<tr>
+<td>mupirocin</td>
+<td>0.007757298735456341</td>
+<td>0.009159215245515702</td>
+</tr>
+<tr>
+<td>quinolone</td>
+<td>0.37832158835366747</td>
+<td>0.08842494718334318</td>
+</tr>
+<tr>
+<td>sulfonamide</td>
+<td>0.035174054192357015</td>
+<td>0.1368367904789564</td>
+</tr>
+<tr>
+<td>tetracycline</td>
+<td>0.012183242185747383</td>
+<td>0.09987284037027115</td>
+</tr>
+</tbody></table>
+<p>Output file <code>extracted.filtered.fa</code> contains all filtered ARG-like sequences after <code>stage_two</code>. <code>blastout.filtered.txt</code> is the metadata of these sequences.</p>
+<h3 id="De-contamination"><a href="#De-contamination" class="headerlink" title="De-contamination:"></a>De-contamination:</h3><p>Before running ARGs-OAP, a de-contamination processes is recommended to secure clean prokaryotic reads. This includes the removal of genomic sequences from hosts (e.g., human), and from fungal sources. This step is critical to avoid potential biases in the calculation of cell numbers which relies on the identification of essential single copy marker genes.</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><h3 id="optional-Single-Paired-end-files"><a href="#optional-Single-Paired-end-files" class="headerlink" title="(optional) Single&#x2F;Paired end files"></a>(optional) Single&#x2F;Paired end files</h3><p>If you use paired-end files, please make sure the forward&#x2F;reverse reads end with <code>_1|_2</code>, <code>_R1|_R2</code> or <code>_fwd|_rev</code> (followed by <code>.format</code>, see -f, <code>.gz</code> optional), otherwise they will not be considered as a single sample. Example for fasta format files (<code>-f fa</code>):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">STAS</span><br><span class="line">   ├── STAS_1.fa</span><br><span class="line">   └── STAS_2.fa.gz</span><br><span class="line">SWHAS104</span><br><span class="line">   ├── SWHAS104_R1.fa</span><br><span class="line">   └── SWHAS104_R2.fa.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="optional-Customized-database-structures"><a href="#optional-Customized-database-structures" class="headerlink" title="(optional) Customized database&#x2F;structures"></a>(optional) Customized database&#x2F;structures</h3><p>To use customized databases (e.g. mobile genetic elements or heave metal resistant genes), you need to prepare two files:</p>
+<ol>
+<li>nucleotide sequences or amino acid (protein) sequences database (e.g. <code>database.fasta</code>)</li>
+<li>hierarchical structure file (e.g. <code>structure.txt</code>)</li>
+</ol>
+<p>The database should be indexed manually (protein or nucleotide, in fasta):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## protein or nucleotide</span><br><span class="line">args_oap make_db -i database.fasta</span><br></pre></td></tr></table></figure>
+
+<p>The structure file <code>structure.txt</code> should be tab-separated and the first column the sequences ID of <code>database.fasta</code> (<strong>please note that the sequence ID cannot contain space, tab and other irregular char such as forward slash</strong>). At lease one column (level 1) is required. For the one column (level 1) case, you may construct the structure file using:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;&gt;level1&#x27; | cat - database.fasta | grep &#x27;^&gt;&#x27; | cut -d &#x27; &#x27; -f 1 | cut -c2- &gt; structure.txt</span><br></pre></td></tr></table></figure>
+
+<p>One example of the <code>database.fasta</code> and <code>structure.txt</code> is :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">database.fasta:</span><br><span class="line"></span><br><span class="line">    &gt;seq1</span><br><span class="line">    ACGT...</span><br><span class="line">    &gt;seq2</span><br><span class="line">    TGCA...</span><br><span class="line"></span><br><span class="line">structure.txt:</span><br><span class="line"></span><br><span class="line">    level1    level2    level3</span><br><span class="line">    seq1    subtype1    type1</span><br><span class="line">    seq2    subtype2    type2</span><br></pre></td></tr></table></figure>
+
+<p>To run args_oap with customized database:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">args_oap stage_one -i input -o output -f fa -t 8 --database database.fasta</span><br><span class="line">args_oap stage_two -i output -t 8 --database database.fasta --structure1 structure.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="optional-Stage-two-pipeline-on-Galaxy-system-and-download-results"><a href="#optional-Stage-two-pipeline-on-Galaxy-system-and-download-results" class="headerlink" title="(optional) Stage two pipeline on Galaxy system and download results"></a>(optional) Stage two pipeline on Galaxy system and download results</h3><p>(<strong>The online version currently does not support SARG v3.0, please use the local version at this moment.</strong>)</p>
+<p>Go to <a target="_blank" rel="noopener" href="http://smile.hku.hk/SARGs">http://smile.hku.hk/SARGs</a> and using the module ARG_OAP.</p>
+<ol>
+<li>Using <strong>ARG_OAP</strong> -&gt; <strong>Upload Files</strong> module to upload the extracted fasta file and meta_data_online.txt file generated in stage one into Galaxy</li>
+<li>Click <strong>ARG_OAP</strong> and <strong>Ublast_stagetwo</strong>, select your uploaded files</li>
+<li>For “Column in Metadata:” chose the column you want to classify your samples (default: 3)</li>
+</ol>
+<p>Click <strong>Execute</strong> and you can find four output files for your information</p>
+<p>After a while or so, you will notice that their are four files generated for your information.</p>
+<p><strong>File 1 and 2</strong>: PcoA figures of your samples and other environment samples generated by ARGs abundance matrix normalization to 16S reads number and cell number<br><strong>File 3 and 4</strong>: Other tabular mother tables which including the profile of ARGs type and sub type information, as long as with other environment samples mother table. File3 results of ARGs abundance normalization against 16S reads number; File 4 results of ARGs abundance normalization against cell number</p>
+<p>There are some questions raised by users, please refer to the <a target="_blank" rel="noopener" href="https://github.com/biofuture/Ublastx_stageone/wiki/FAQ">FAQ</a> for details. To run ARG OAP locally, users should download the source code into local computer system (Unix&#x2F;Linux). Users can upload the generated files for stage two onto our Galaxy analysis platform (<a target="_blank" rel="noopener" href="http://smile.hku.hk/SARGs">http://smile.hku.hk/SARGs</a>) or use the local version of stage two script.</p>
+<hr>
+<p><strong>Notice:</strong></p>
+<p>This tools only provide the required scripts for ARGs-OAP 3.0 pipeline</p>
+<p>This pipeline is distributed in the hope to achieve the aim of management of antibiotic resistant genes in environment, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.This pipeline is only allowed to be used for non-commercial and academic purpose.</p>
+<p><strong>The SARG database is distributed only freely used for academic purpose, any commercial use should require the agreement from the developer team.</strong></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。 </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2021-2025 Cling
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
